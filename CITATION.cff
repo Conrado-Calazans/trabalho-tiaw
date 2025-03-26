@@ -2,21 +2,22 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Franqlin
+    given-names: Rafael
+  - family-names: Cordeiro
+    given-names: Bianca
+  - family-names: Carmo
+    given-names: Andre
+  - family-names: Calazans
+    given-names: Conrado
+  - family-names: Caua
+    given-names: Thales
+
 
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Maciel
+    given-names: Wesley
 
     keywords:
     - 
