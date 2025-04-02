@@ -12,6 +12,7 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são: 
+- Andre Luiz do Carmo
 - Bianca Larisse Cordeiro de Moura
 - Conrado Calazans de Souza
 - Matheus da Silva Santos
