@@ -1,9 +1,9 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`Capitulo Aberto`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`: 
+`CURSO`: Sistemas de Informação e Analise e Desenvolvimento de Sistemas
 
 `SEMESTRE:`
 
@@ -12,8 +12,11 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
+- Bianca Larisse Cordeiro de Moura
+- Conrado Calazans de Souza
+- Matheus da Silva Santos
+- Rafael Franklin Coelho Barbosa
+- Thales Cauã Martins Antunes
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 
