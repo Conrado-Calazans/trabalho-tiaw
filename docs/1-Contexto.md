@@ -1,4 +1,4 @@
-# Introdução
+## Introdução
 
 ## Problema
 > O acesso à leitura e ao conhecimento ainda é um desafio para grande parte da população, especialmente em contextos de desigualdade socioeconômica. Muitos estudantes, profissionais e autodidatas enfrentam >barreiras no acesso a livros e conteúdos de qualidade devido a fatores como alto custo de materiais, limitação de tempo para frequentar bibliotecas físicas e a falta de uma plataforma centralizada que facilite a >descoberta de conteúdos relevantes.
