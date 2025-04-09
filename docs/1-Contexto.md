@@ -1,6 +1,8 @@
-## Introdução
+
+# Introdução
 
 ## Problema
+
 > O acesso à leitura e ao conhecimento ainda é um desafio para grande parte da população, especialmente em contextos de desigualdade socioeconômica. Muitos estudantes, profissionais e autodidatas enfrentam >barreiras no acesso a livros e conteúdos de qualidade devido a fatores como alto custo de materiais, limitação de tempo para frequentar bibliotecas físicas e a falta de uma plataforma centralizada que facilite a >descoberta de conteúdos relevantes.
 
 >A ausência de recursos gratuitos, organizados e acessíveis impacta diretamente o desenvolvimento pessoal e profissional dessas pessoas, dificultando o estímulo à leitura, o pensamento crítico e a construção de uma >base sólida de conhecimento. Além disso, muitas iniciativas existentes carecem de suporte interativo, recursos de acompanhamento de estudos e integração com comunidades de aprendizado, o que pode comprometer a >motivação e a continuidade do processo educativo.
