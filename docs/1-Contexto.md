@@ -1,16 +1,11 @@
 # Introdução
 
 ## Problema
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
+> O acesso à leitura e ao conhecimento ainda é um desafio para grande parte da população, especialmente em contextos de desigualdade socioeconômica. Muitos estudantes, profissionais e autodidatas enfrentam >barreiras no acesso a livros e conteúdos de qualidade devido a fatores como alto custo de materiais, limitação de tempo para frequentar bibliotecas físicas e a falta de uma plataforma centralizada que facilite a >descoberta de conteúdos relevantes.
+
+>A ausência de recursos gratuitos, organizados e acessíveis impacta diretamente o desenvolvimento pessoal e profissional dessas pessoas, dificultando o estímulo à leitura, o pensamento crítico e a construção de uma >base sólida de conhecimento. Além disso, muitas iniciativas existentes carecem de suporte interativo, recursos de acompanhamento de estudos e integração com comunidades de aprendizado, o que pode comprometer a >motivação e a continuidade do processo educativo.
+
+>Este problema se insere em um cenário onde tecnologias digitais estão cada vez mais presentes no cotidiano, mas ainda não são plenamente aproveitadas para democratizar o acesso à leitura e à formação intelectual. >Em um contexto de crescimento das plataformas de ensino online e das comunidades de aprendizagem colaborativa, torna-se evidente a necessidade de soluções que não apenas ofereçam conteúdo gratuito, mas que também >auxiliem na organização, acompanhamento e engajamento contínuo dos usuários.
 >
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
