@@ -16,11 +16,13 @@
 
 ## Objetivos
 
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
+> Objetivo Geral
+>Desenvolver um software de biblioteca online que disponibilize livros gratuitos para leitura, com foco na democratização do acesso ao conhecimento e na promoção da leitura como ferramenta de desenvolvimento >pessoal e profissional.
+
+>Objetivos Específicos
+>Investigar os principais desafios enfrentados por estudantes e leitores autônomos no acesso a livros e conteúdos educativos, por meio da aplicação de questionários e entrevistas.
+>Implementar funcionalidades que auxiliem na organização da leitura, como marcadores de progresso, categorização temática e recomendações personalizadas.
+>Avaliar o impacto da plataforma no engajamento dos usuários com a leitura, por meio de testes com usuários e análise de métricas de uso.
 > 
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
