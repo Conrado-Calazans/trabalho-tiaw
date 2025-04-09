@@ -10,9 +10,9 @@
 
 ## User Flow
 
-<img src="images/slack.jpg" alt="telas da aplicacao"> 
+<img src="images/telas.jpg" alt="telas da aplicacao"> 
 
-![alt text](images/slack.jpg)
+![alt text](images/telas.jpg)
 
 ![Exemplo de UserFlow](images/userflow.jpg)
 
