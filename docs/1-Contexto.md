@@ -16,7 +16,7 @@
 
 ## Objetivos
 
-> Objetivo Geral
+> Objetivo Geral: 
 >Desenvolver um software de biblioteca online que disponibilize livros gratuitos para leitura, com foco na democratização do acesso ao conhecimento e na promoção da leitura como ferramenta de desenvolvimento >pessoal e profissional.
 
 >Objetivos Específicos
