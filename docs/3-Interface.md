@@ -10,6 +10,9 @@
 
 ## User Flow
 
+
+![alt text](Telas.png>)
+
 ![Exemplo de UserFlow](images/userflow.jpg)
 
 > Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
