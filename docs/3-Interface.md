@@ -11,7 +11,7 @@
 ## User Flow
 
 
-![alt text](Telas.png>)
+![alt text](images/Telas.png>)
 
 ![Exemplo de UserFlow](images/userflow.jpg)
 
