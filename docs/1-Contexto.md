@@ -19,7 +19,7 @@
 > Objetivo Geral: 
 >Desenvolver um software de biblioteca online que disponibilize livros gratuitos para leitura, com foco na democratização do acesso ao conhecimento e na promoção da leitura como ferramenta de desenvolvimento >pessoal e profissional.
 
->Objetivos Específicos
+>Objetivos Específicos: 
 >Investigar os principais desafios enfrentados por estudantes e leitores autônomos no acesso a livros e conteúdos educativos, por meio da aplicação de questionários e entrevistas.
 >Implementar funcionalidades que auxiliem na organização da leitura, como marcadores de progresso, categorização temática e recomendações personalizadas.
 >Avaliar o impacto da plataforma no engajamento dos usuários com a leitura, por meio de testes com usuários e análise de métricas de uso.
