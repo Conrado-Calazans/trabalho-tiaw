@@ -3,11 +3,11 @@
 
 ## Problema
 
-> O acesso à leitura e ao conhecimento ainda é um desafio para grande parte da população, especialmente em contextos de desigualdade socioeconômica. Muitos estudantes, profissionais e autodidatas enfrentam >barreiras no acesso a livros e conteúdos de qualidade devido a fatores como alto custo de materiais, limitação de tempo para frequentar bibliotecas físicas e a falta de uma plataforma centralizada que facilite a >descoberta de conteúdos relevantes.
+> O acesso à leitura e ao conhecimento ainda é um desafio para grande parte da população, especialmente em contextos de desigualdade socioeconômica. Muitos estudantes, profissionais e autodidatas enfrentam >barreiras no acesso a livros e conteúdos de qualidade devido a fatores como alto custo de materiais, limitação de tempo para frequentar bibliotecas físicas e a falta de uma plataforma centralizada que >facilite a >descoberta de conteúdos relevantes.
 
->A ausência de recursos gratuitos, organizados e acessíveis impacta diretamente o desenvolvimento pessoal e profissional dessas pessoas, dificultando o estímulo à leitura, o pensamento crítico e a construção de uma >base sólida de conhecimento. Além disso, muitas iniciativas existentes carecem de suporte interativo, recursos de acompanhamento de estudos e integração com comunidades de aprendizado, o que pode comprometer a >motivação e a continuidade do processo educativo.
+>A ausência de recursos gratuitos, organizados e acessíveis impacta diretamente o desenvolvimento pessoal e profissional dessas pessoas, dificultando o estímulo à leitura, o pensamento crítico e a construção >de uma >base sólida de conhecimento. Além disso, muitas iniciativas existentes carecem de suporte interativo, recursos de acompanhamento de estudos e integração com comunidades de aprendizado, o que pode >comprometer a >motivação e a continuidade do processo educativo.
 
->Este problema se insere em um cenário onde tecnologias digitais estão cada vez mais presentes no cotidiano, mas ainda não são plenamente aproveitadas para democratizar o acesso à leitura e à formação intelectual. >Em um contexto de crescimento das plataformas de ensino online e das comunidades de aprendizagem colaborativa, torna-se evidente a necessidade de soluções que não apenas ofereçam conteúdo gratuito, mas que também >auxiliem na organização, acompanhamento e engajamento contínuo dos usuários.
+>Este problema se insere em um cenário onde tecnologias digitais estão cada vez mais presentes no cotidiano, mas ainda não são plenamente aproveitadas para democratizar o acesso à leitura e à formação >intelectual. >Em um contexto de crescimento das plataformas de ensino online e das comunidades de aprendizagem colaborativa, torna-se evidente a necessidade de soluções que não apenas ofereçam conteúdo >gratuito, mas que também >auxiliem na organização, acompanhamento e engajamento contínuo dos usuários.
 >
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -29,14 +29,11 @@
 
 ## Justificativa
 
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
+>O interesse em desenvolver este aplicativo surgiu da percepção de que, apesar do crescente uso da tecnologia na educação, o acesso gratuito e estruturado a livros ainda é uma lacuna significativa, >principalmente entre estudantes de baixa renda. Ao observar essa realidade, tornou-se evidente a importância de criar uma ferramenta que não apenas reúna acervos gratuitos, mas que também promova uma >experiência de leitura mais acessível, organizada e interativa.
+
+>A escolha dos objetivos específicos se baseia na necessidade de compreender melhor o público-alvo e garantir que a solução desenvolvida atenda de forma prática e eficaz às suas necessidades. Por isso, >pretende-se aplicar questionários e entrevistas com estudantes e leitores interessados em plataformas de leitura digital. Além disso, ao focar no desenvolvimento de funcionalidades organizacionais e de >acompanhamento da leitura, busca-se aumentar o engajamento dos usuários, promovendo a continuidade no hábito da leitura.
+
+>Essa iniciativa visa não só oferecer um acervo digital gratuito, mas também contribuir com a inclusão digital e o fortalecimento da educação autônoma no país.
 >
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
