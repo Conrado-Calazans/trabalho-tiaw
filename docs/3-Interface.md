@@ -13,7 +13,10 @@
 ## User Flow
 <img src="images/1.jpg" alt="telas da aplicacao"> 
 <img src="images/2.jpg" alt="telas da aplicacao"> 
-<a href="https://www.figma.com/design/5kEplYiGTnzeWjMEbkGhyg/IOS?node-id=0-1&t=g8UddJFXw7Urp4Uh-1"> Miro </a>
+
+<a> Diagramas de Personas</a>
+<img src="images/DP.jpg" alt="Diagramas de Personas"> 
+<a href="https://miro.com/app/board/uXjVIO5kk38=/"> Miro </a>
 
 ![alt text](images/Entendimento 2.jpg)
 
