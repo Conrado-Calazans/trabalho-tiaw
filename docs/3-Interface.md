@@ -9,6 +9,8 @@
 > Projeto](2-Especificação.md).
 <img src="images/RF.jpg" alt="Requisitos funcionais"> 
 <img src="images/RNF.jpg" alt="Requisitos nao funcionais">
+<a href="[https://docs.google.com/document/d/1xR27SsWJA2YgyywcRFJQPwulbOxkBNKMQMz0Ca11rvE/edit?tab=t.0](https://docs.google.com/document/d/1xR27SsWJA2YgyywcRFJQPwulbOxkBNKMQMz0Ca11rvE/edit?tab=t.0)"> Documento Requisitos </a>
+
 
 ## User Flow
 <img src="images/1.jpg" alt="telas da aplicacao"> 
