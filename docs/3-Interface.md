@@ -2,11 +2,13 @@
 # Projeto de Interface
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação.md"> Documentação de Especificação</a></span>
-
+<img src="images/1.jpg" alt="telas da aplicacao"> 
 > Apresente as principais a interface da plataforma. Discuta como ela
 > foi elaborada de forma a atender os requisitos funcionais, não
 > funcionais e histórias de usuário abordados nas [Especificações do
 > Projeto](2-Especificação.md).
+<img src="images/RF.jpg" alt="Requisitos funcionais"> 
+<img src="images/RNF.jpg" alt="Requisitos nao funcionais">
 
 ## User Flow
 <img src="images/1.jpg" alt="telas da aplicacao"> 
