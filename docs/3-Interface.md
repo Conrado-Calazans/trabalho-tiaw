@@ -21,7 +21,7 @@
 <a href="https://miro.com/app/board/uXjVIO5kk38=/"> Miro </a>
 
 
-<img src="images/MP.jpg" alt="Mapa das possibilidades">  
+
 
 
 ![Exemplo de UserFlow](images/userflow.jpg)
