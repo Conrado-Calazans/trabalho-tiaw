@@ -72,8 +72,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O aplicativo deve suportar uma grande massa de usuários simultâneos| ALTA | 
+|RNF-002| O aplicativo deve ter uma interface intuitiva, amistosa e responsividade| CRÍTICA | 
+|RNF-003| O aplicativo deve ter compatibilidade com múltiplas plataformas (Web, android, iOS)|  ALTA |
+|RNF-004| Política de privacidade clara sobre o uso de dados pessoais| ALTA |
+|RNF-005| Carregamento rápido das páginas, especialmente para usuários com internet lenta|  ALTA |
+|RNF-006| Código com documentação e notas para futuras melhorias/manutenção| ALTA |
+|RNF-007| Direitos autorais preservados ao exibir trechos e resenhas de livros| CRÍTICA |
+|RNF-008| Opções de áudio para resumos de livros ou recomendações.| ALTA |
 
 > Com base nas Histórias de Usuário, enumere os requisitos da sua
 > solução. Classifique esses requisitos em dois grupos:
