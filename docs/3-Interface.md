@@ -23,7 +23,6 @@
 
 <img src="images/MP.jpg" alt="Mapa das possibilidades">  
 
-![alt text](images/Entendimento 2.jpg)
 
 ![Exemplo de UserFlow](images/userflow.jpg)
 
