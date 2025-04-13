@@ -58,8 +58,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefa | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Criar conta via e-mail/senha ou redes sociais| ALTA | 
+|RF-002| O usuário deve poder logar e deslogar da plataforma| MÉDIA |
+|RF-003| O usuário deve poder atualizar seus dados pessoais| MÉDIA |
+|RF-004| O usuário deve poder visualizar seu histórico de leituras| MÉDIA |
+|RF-005| O usuário deve poder pesquisar livros por título, autor ou palavra-chave| MÉDIA |
+|RF-006| O usuário deve poder avaliar e comentar nos livros| MÉDIA |
+|RF-007| O aplicativo deve sugerir livros com base na preferência e no histórico de leitura| MÉDIA |
+|RF-008| O aplicativo deve oferecer marcadores, anotações e destaques durante a leitura| MÉDIA |
 
 
 ### Requisitos não Funcionais
