@@ -9,9 +9,9 @@
 > Projeto](2-Especificação.md).
 
 ## User Flow
-
+<img src="images/1.jpg" alt="telas da aplicacao"> 
 <img src="images/2.jpg" alt="telas da aplicacao"> 
-<a href="https://www.figma.com/design/5kEplYiGTnzeWjMEbkGhyg/IOS?node-id=0-1&t=g8UddJFXw7Urp4Uh-1"> Figma </a>
+<a href="https://www.figma.com/design/5kEplYiGTnzeWjMEbkGhyg/IOS?node-id=0-1&t=g8UddJFXw7Urp4Uh-1"> Miro </a>
 
 ![alt text](images/Entendimento 2.jpg)
 
