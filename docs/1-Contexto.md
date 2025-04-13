@@ -40,16 +40,15 @@
 
 ## Público-Alvo
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
+> A aplicação será utilizada por pessoas com diferentes perfis, mas que compartilham o interesse pelo desenvolvimento pessoal, educacional e profissional por meio da leitura e do uso de tecnologias digitais. >De modo geral, o público-alvo é formado por jovens e adultos com níveis variados de familiaridade com recursos tecnológicos, mas que já fazem uso cotidiano de smartphones, tablets e plataformas digitais.
+
+>Um dos principais perfis são jovens profissionais em início de carreira, como auxiliares administrativos ou técnicos, que buscam adquirir novos conhecimentos e melhorar suas habilidades de comunicação. Esse >grupo costuma ter uma relação próxima com a tecnologia no dia a dia, utilizando aplicativos de mensagens, redes sociais e streaming, mas possui pouco contato com plataformas mais voltadas ao aprendizado. >Eles valorizam experiências intuitivas, acessíveis e que se encaixem em suas rotinas corridas, como nos trajetos de casa para o trabalho.
+
+>Outro perfil importante são os educadores e pesquisadores da área de literatura e educação digital. São usuários mais experientes, com alto grau de conhecimento acadêmico e domínio de ferramentas >tecnológicas voltadas ao ensino e à produção de conteúdo. Utilizam frequentemente tablets, softwares de anotações, repositórios e bibliotecas digitais. Costumam exercer papel de liderança ou referência >dentro de suas comunidades profissionais e esperam da aplicação uma experiência organizada, confiável e alinhada com suas práticas pedagógicas.
+
+>Por fim, há também estudantes de pós-graduação e profissionais da área de Ciência da Informação e Tecnologia da Informação. Esses usuários têm uma postura analítica e racional, e utilizam a tecnologia de >forma mais técnica e funcional. Estão habituados a lidar com sistemas de organização de conteúdo, colaboração online e pesquisa acadêmica. Valorizam conteúdos atualizados, curadoria de qualidade e >funcionalidades que incentivem a troca de conhecimento entre usuários.
+
+>Em comum, esses perfis buscam uma aplicação que ofereça uma experiência fluida, personalizável, com conteúdo relevante e que respeite suas motivações e realidades. Espera-se que a plataforma seja acessível, >sem burocracia, e que contribua tanto para o aprendizado quanto para o avanço profissional ou pessoal de seus usuários.
 > 
 > **Links Úteis**:
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
