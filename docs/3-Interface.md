@@ -18,6 +18,14 @@
 
 <a> Diagramas de Personas</a>
 <img src="images/DP.jpg" alt="Diagramas de Personas"> 
+
+<a> Mapa de Priorização</a>
+<img src="images/mapa_priorização.png" alt="Mapa de Priorização"> 
+
+<a> Mural de Possibilidades</a>
+<img src="images/mural_possibilidades.png" alt="Mural de Possibilidades"> 
+
+
 <a href="https://miro.com/app/board/uXjVIO5kk38=/"> Miro </a>
 
 
