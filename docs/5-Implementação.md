@@ -67,11 +67,14 @@ Tela de Favoritos/Progresso: Painel onde o usuário visualiza livros salvos e pr
 
 ## Arquitetura da solução
 
+A arquitetura da aplicação será baseada em uma abordagem estática com interação no cliente, ideal para projetos hospedados via GitHub Pages: 
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
-
- Inclua um diagrama da solução e descreva os módulos e as tecnologias
- que fazem parte da solução. Discorra sobre o diagrama.
+Frontend (Cliente) 
+Toda a lógica da aplicação estará no lado do cliente, com páginas HTML, estilos CSS e scripts JavaScript executados diretamente no navegador do usuário. A interface permitirá a navegação por títulos, filtros, leitura dos livros e organização do conteúdo. 
+Armazenamento Local (LocalStorage) 
+Para funcionalidades como marcação de progresso de leitura e favoritos, será utilizado o LocalStorage do navegador, eliminando a necessidade de um banco de dados externo no estágio inicial do projeto. 
+Hospedagem (GitHub Pages) 
+Os arquivos do projeto (HTML, CSS, JS e livros digitais) serão versionados e hospedados no GitHub Pages, tornando o acesso ao sistema fácil e gratuito. 
  
  **Exemplo do diagrama de Arquitetura**:
  
