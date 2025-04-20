@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capítulo Aberto</title>
+  <link rel="stylesheet" href="style.css"/>  
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/CA_logo.png" alt="Capítulo Aberto" />
+        <div class="textos">
+          <h1>Biblioteca online gratuita</h1>
+          <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
+          <button class="explorar-btn" id="explorarBtn">Explorar</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="secondary-header">
+    <div class="menu">
+      <a href="favoritos.html">Meus favoritos</a>
+      <a href="catalogo.html">Catalogo de livros</a>          
+      <button id="authButton">Entrar/Cadastrar</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="images/CA_notebook_readref.png" alt="Livros em um notebook" />
+  </section>
+
+  <section class="destaques">
+    <h2>Em Destaque</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Livro 1</h3>
+        <img src="images/book-icon.png" alt="Livro" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class ="livro-btn" id = "livroBtn">Ver mais</button>
+      </div>
+      <div class="card">
+        <h3>Livro 2</h3>
+        <img src="images/book-icon.png" alt="Artigo" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class ="livro-btn" id = "livroBtn">Ver mais</button>
+      </div>
+      <div class="card">
+        <h3>Livro 3</h3>
+        <img src="images/book-icon.png" alt="Livro" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class ="livro-btn" id = "livroBtn">Ver mais</button>
+      </div>
+      <div class="card">
+        <h3>Livro 4</h3>
+        <img src="images/book-icon.png" alt="Artigo" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class ="livro-btn" id = "livroBtn">Ver mais</button>
+      </div>
+    </div>
+  </section>
+
+<!-- Representativo -->
+
+ <!-- <section class="videos">
+    <div class="video">
+      <div class="play-button">▶</div>
+      <div class="info">
+        <div class="bar"></div>
+        <div class="bar short"></div>
+      </div>
+    </div>
+    <div class="video">
+      <div class="play-button">▶</div>
+      <div class="info">
+        <div class="bar"></div>
+        <div class="bar short"></div>
+      </div>
+    </div>
+  </section> -->
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Produtos</a>
+      <a href="#">Parcerias</a>
+      <a href="#">Recursos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+    <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
+  </footer>
+
+  <!-- Modal de Autenticação -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="auth-forms">
+        <form id="loginForm" class="active">
+          <h3>Entrar</h3>
+          <input type="email" id="loginEmail" placeholder="Email" required>
+          <input type="password" id="loginPassword" placeholder="Senha" required>
+          <div class="lembrar-senha">
+            <input type="checkbox" id="lembrar-senha">
+            <label for="lembrar-senha">Lembrar senha</label>
+          </div>
+          <button type="submit">Entrar</button>
+          <div class="register-link">
+            <p>Não tem uma conta? <a href="cadastro.html">Registre-se</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> 
+
+  <script src="script.js"></script>
+</body>
+</html>
