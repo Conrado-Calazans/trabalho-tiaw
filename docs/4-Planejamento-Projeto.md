@@ -3,8 +3,7 @@
 > Aqui será feito o gerenciamento das tarefas de implementação do projeto.
 
 ## Divisão de Papéis
-
-> Apresente a divisão de papéis entre os membros do grupo em cada sprint. O desejável é que, em cada sprint, o aluno assuma papéis diferentes na disciplina. Siga o modelo do exemplo abaixo:
+<img src="images/divisao_papeis.png" alt="Divisão de Papéis">
 
   
 ### Sprint 1
@@ -27,8 +26,7 @@
 
   
 ## Quadro de tarefas
-
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme exemplo abaixo.
+<img src="images/quadro_tarefas.png" alt="Quadro de Tarefas">
 
 
 
@@ -82,6 +80,16 @@ As ferramentas empregadas no projeto são:
 - Frameworks 
 - Outras ferramentas externas
 
+## Referências Bibliográficas
+ABREU, J. C.; LIMA, A. F. Inclusão digital e acesso à informação: o papel das bibliotecas virtuais na democratização do conhecimento. Revista Eletrônica de Biblioteconomia e Ciência da Informação, v. 21, n. 1, p. 124–137, 2016. 
+
+GIL, A. C. Como elaborar projetos de pesquisa. 7. ed. São Paulo: Atlas, 2019. 
+
+PRESSMAN, R. S.; MAXIM, B. R. Engenharia de Software: uma abordagem profissional. 8. ed. Porto Alegre: AMGH, 2016. 
+
+MOZILLA DEVELOPER NETWORK (MDN). HTML: HyperText Markup Language. Disponível em: https://developer.mozilla.org/pt-BR/docs/Web/HTML. 
+
+ W3SCHOOLS. CSS Tutorial. Disponível em: https://www.w3schools.com/css/.  
 
 ## Links Úteis
 > - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
