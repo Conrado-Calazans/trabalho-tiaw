@@ -17,7 +17,7 @@
 
 ## Link da apresentação
 
-> - [PDF com Slides da Apresentação](<a href="https://sgapucminasbr-my.sharepoint.com/personal/1308416_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=EdKBAu2JOcRNl5octKbLhngBowYuT0du1Q6o_GUXQDF9Yg&e=SXrzZp " target="_blank"></a>)
+> - [PDF com Slides da Apresentação](https://sgapucminasbr-my.sharepoint.com/personal/1308416_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=EdKBAu2JOcRNl5octKbLhngBowYuT0du1Q6o_GUXQDF9Yg&e=SXrzZp)
 
 
 
