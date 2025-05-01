@@ -15,10 +15,9 @@
 > - [Top Tips for Effective Presentations](https://www.skillsyouneed.com/present/presentation-tips.html)
 > - [How to make a great presentation](https://www.ted.com/playlists/574/how_to_make_a_great_presentation)
 
-## Slides
+## Link da apresentação
 
-Coloque aqui os slides da apresentação
+> - [PDF com Slides da Apresentação](<a href="https://sgapucminasbr-my.sharepoint.com/personal/1308416_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=EdKBAu2JOcRNl5octKbLhngBowYuT0du1Q6o_GUXQDF9Yg&e=SXrzZp " target="_blank"></a>)
 
-## Vídeo
 
-No caso de apresentação gravada, insira aqui o link do vídeo de apresentação.
+
