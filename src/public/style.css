@@ -166,6 +166,7 @@ footer {
   margin: 0 10px;
   text-decoration: none;
   color: #333;
+  
 }
 
 .footer-copy {
@@ -645,6 +646,16 @@ footer {
   color: #666;
   margin-bottom: 1.5rem;
 }
+
+.secondary-header .menu a {
+  text-align: center;
+  width: 12%;
+}
+
+.search-box{
+  width: 35%;
+}
+
 
 
 

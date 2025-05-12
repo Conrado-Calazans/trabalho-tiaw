@@ -16,18 +16,18 @@
         <div class="textos">
           <h1>Biblioteca online gratuita</h1>
           <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
-          <button class="explorar-btn" id="explorarBtn">Explorar</button>
         </div>
       </div>
     </div>
   </header>
 
   <header class="secondary-header">
-    <div class="menu">      
-      <a href="favoritos.html">Favoritos</a>
+    <div class="menu">  
+      <a>Principais Autores</a>
+      <a href="favoritos.html">Livros Favoritos</a>
       <a href="minha_conta.html">Minha Conta</a>
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Pesquisar livros...">
+        <input type="text" id="searchInput" placeholder="Pesquisar livros por título, autor ou palavra-chave  ">
         <a class="search-btn">
           <img src="images/lupa.png" alt="">
         </a>
@@ -37,15 +37,15 @@
 
 
   <section class="favoritos-container">
-    <h2>Catalogo de livros</h2>
+    <h2>Catálogo de livros</h2>
     <div class="livros-grid">
       <div class="livro-card">
         <div class="livro-icon">
-          <img src="images/book-icon.png" alt="Ícone do livro">
+          <img src="images/salvar-democracia.jpg" alt="Ícone do livro">
         </div>
         <div class="livro-info">
-          <h3>Livro 1</h3>
-          <p class="descricao">Descrição do livro 1</p>
+          <h3>Como Salvar a Democracia</h3>
+          <p class="descricao">A obra reúne contribuições de acadêmicos e especialistas renomados que oferecem análises profundas e propostas concretas para fortalecer os pilares democráticos.</p>
           <div class="card-actions">
             <button class="btn-ler" onclick="openPDF('pdfs/livro.pdf')">Ler</button>
             <button class="btn-favorito active">
@@ -57,13 +57,78 @@
 
       <div class="livro-card">
         <div class="livro-icon">
-          <img src="images/book-icon.png" alt="Ícone do livro">
+          <img src="images/arte_guerra.jpg" alt="Ícone do livro">
         </div>
         <div class="livro-info">
-          <h3>Livro 2</h3>
-          <p class="descricao">Descrição do livro 2</p>
+          <h3>A Arte da Guerra</h3>
+          <p class="descricao">O livro ensina princípios de liderança, tática e estratégia que vão além do campo de batalha, sendo amplamente aplicado em áreas como negócios, política e desenvolvimento pessoal. </p>
           <div class="card-actions">
-            <button class="btn-ler" onclick="openPDF('pdfs/livro.pdf')">Ler</button>
+            <button class="btn-ler" onclick="openPDF('pdfs/arte_guerra.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/o_principe.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>O Príncipe</h3>
+          <p class="descricao">É um tratado político escrito no século XVI que oferece conselhos diretos sobre como conquistar, manter e exercer o poder.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/o_principe_maquiavel.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+       <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3></h3>
+          <p class="descricao"></p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+       <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3></h3>
+          <p class="descricao"></p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+       <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3></h3>
+          <p class="descricao"></p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/.pdf')">Ler</button>
             <button class="btn-favorito active">
               <img src="images/heart-filled.png" alt="Favorito">
             </button>
@@ -73,19 +138,52 @@
 
       <div class="livro-card">
         <div class="livro-icon">
-          <img src="images/book-icon.png" alt="Ícone do livro">
+          <img src="images/" alt="Ícone do livro">
         </div>
         <div class="livro-info">
-          <h3>Livro 3</h3>
-          <p class="descricao">Descrição do livro 3</p>
+          <h3></h3>
+          <p class="descricao"></p>
           <div class="card-actions">
-            <button class="btn-ler" onclick="openPDF('pdfs/livro.pdf')">Ler</button>
+            <button class="btn-ler" onclick="openPDF('pdfs/.pdf')">Ler</button>
             <button class="btn-favorito active">
               <img src="images/heart-filled.png" alt="Favorito">
             </button>
           </div>
         </div>
       </div>
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3></h3>
+          <p class="descricao"></p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3></h3>
+          <p class="descricao"></p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+    
     </div>
     </div>    
   </section>
