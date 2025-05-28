@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcacao de Leitura- Capítulo Aberto</title>
+  <link rel="stylesheet" href="style.css"/>  
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="/Users/biancalarissecordeiro/Trabalho TIAW/pbr-si-2025-1-p1-tiaw-t2-3013102-pbr-si-2025-1-p1-capituloaberto/src/public/Logo.png" alt="Capítulo Aberto" />
+        <div class="textos">
+          <h1>Biblioteca online gratuita</h1>
+          <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="secondary-header">
+    <div class="menu">      
+      <a href="catalogo.html">Catalogo de livros</a>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar livros...">
+        <a class="search-btn">
+          <img src="images/lupa.png" alt="">
+        </a>
+      </div>      
+    </div>
+  </header>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .livro {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+    }
+
+    .livro h2 {
+      margin: 0 0 10px;
+    }
+
+    .status {
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .status.lendo {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .status.concluido {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .status.nao-lido {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .acoes {
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📚 Histórico de Leitura</h1>
+
+    <div class="livro">
+      <h2>Como Salvar a Democracia</h2>
+      <p>Status: <span class="status lendo">Lendo</span></p>
+      <p class="notas">Notas: <span class="texto-nota">Leitura densa, mas essencial. Releitura recomendada.</span></p>
+      <p>Última atualização: 18/05/2025</p>
+      <div class="acoes">
+        <button onclick="marcarComoConcluido(this)">Concluir Leitura</button>
+        <button onclick="editarNotas(this)">Editar Notas</button>
+      </div>
+    </div>
+
+    <div class="livro">
+      <h2>O Príncipe</h2>
+      <p>Status: <span class="status concluido">Concluído</span></p>
+      <p class="notas">Notas: <span class="texto-nota">Interessante comparação com política atual.</span></p>
+      <p>Última atualização: 15/05/2025</p>
+      <div class="acoes">
+        <button onclick="reiniciarLeitura(this)">Reiniciar Leitura</button>
+        <button onclick="editarNotas(this)">Editar Notas</button>
+      </div>
+    </div>
+
+    <div class="livro">
+      <h2>Entendendo Algoritmos</h2>
+      <p>Status: <span class="status nao-lido">Não lido</span></p>
+      <p class="notas">Notas: <span class="texto-nota">—</span></p>
+      <p>Última atualização: 10/05/2025</p>
+      <div class="acoes">
+        <button onclick="marcarComoLendo(this)">Começar Leitura</button>
+        <button onclick="editarNotas(this)">Adicionar Notas</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function marcarComoConcluido(botao) {
+      const status = botao.closest('.livro').querySelector('.status');
+      status.textContent = 'Concluído';
+      status.className = 'status concluido';
+    }
+
+    function marcarComoLendo(botao) {
+      const status = botao.closest('.livro').querySelector('.status');
+      status.textContent = 'Lendo';
+      status.className = 'status lendo';
+    }
+
+    function reiniciarLeitura(botao) {
+      const status = botao.closest('.livro').querySelector('.status');
+      status.textContent = 'Não lido';
+      status.className = 'status nao-lido';
+    }
+
+    function editarNotas(botao) {
+      const livro = botao.closest('.livro');
+      const notaSpan = livro.querySelector('.texto-nota');
+      const textoAtual = notaSpan.textContent.trim();
+
+      const textarea = document.createElement('textarea');
+      textarea.value = textoAtual;
+
+      const salvar = document.createElement('button');
+      salvar.textContent = 'Salvar';
+      salvar.onclick = function () {
+        notaSpan.textContent = textarea.value;
+        notaSpan.style.display = 'inline';
+        textarea.remove();
+        salvar.remove();
+      };
+
+      notaSpan.style.display = 'none';
+      notaSpan.parentNode.appendChild(textarea);
+      botao.parentNode.appendChild(salvar);
+    }
+  </script>
+</body>
+</html>
