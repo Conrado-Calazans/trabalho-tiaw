@@ -15,7 +15,6 @@ Os membros do grupo são:
 - Andre Luiz do Carmo
 - Bianca Larisse Cordeiro de Moura
 - Conrado Calazans de Souza
-- Matheus da Silva Santos
 - Rafael Franklin Coelho Barbosa
 - Thales Cauã Martins Antunes
 
