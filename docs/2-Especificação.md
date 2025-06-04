@@ -6,11 +6,6 @@
 > documento, enumerando as técnicas e/ou ferramentas utilizadas para
 > realizar a especificações do projeto
 
-## Requisitos Funcionais e não Funcionais
-<img src="images/RF.jpg" alt="Requisitos funcionais"> 
-<img src="images/RNF.jpg" alt="Requisitos nao funcionais">
-<a href="https://docs.google.com/document/d/1xR27SsWJA2YgyywcRFJQPwulbOxkBNKMQMz0Ca11rvE/edit?tab=t.0(https://docs.google.com/document/d/1xR27SsWJA2YgyywcRFJQPwulbOxkBNKMQMz0Ca11rvE/edit?tab=t.0)"> </a>
-
 ## Mapa de Stakeholders
 <img src="images/1.jpg" alt="Mapa de Stakeholders"> 
 
