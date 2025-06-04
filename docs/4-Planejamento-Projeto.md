@@ -36,8 +36,8 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Bianca Larisse Cordeiro de Moura        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/01/2005      |
-| Bianca Larisse Cordeiro de Moura        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️    |                 |
+| Bianca Larisse Cordeiro de Moura        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 18/04/2025      |
+| Bianca Larisse Cordeiro de Moura        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️    |  18/04/2025  |
 | AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
 | AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
 
@@ -58,8 +58,8 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Bianca Larisse Cordeiro de Moura        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/01/2005      |
-| Bianca Larisse Cordeiro de Moura        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️    |                 |
+| Bianca Larisse Cordeiro de Moura        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 18/04/2025      |
+| Bianca Larisse Cordeiro de Moura        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️    | 18/04/2025   |
 | AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
 | AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
 
