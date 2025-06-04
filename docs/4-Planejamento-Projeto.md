@@ -10,7 +10,7 @@
 - _Scrum master_: Bianca Larisse Cordeiro de Moura
 - Protótipos: AlunoY
 - Testes: AlunoK
-- Documentação: AlunaZ
+- Documentação: Bianca Larisse Cordeiro de Moura
 
 ### Sprint 2
 - _Scrum master_: Bianca Larisse Cordeiro de Moura
