@@ -12,7 +12,7 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são: 
-- Andre Luiz do Carmo
+- Arthur Felipe
 - Bianca Larisse Cordeiro de Moura
 - Conrado Calazans de Souza
 - Rafael Franklin Coelho Barbosa

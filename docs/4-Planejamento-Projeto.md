@@ -9,18 +9,19 @@
 ### Sprint 1
 - _Scrum master_: Bianca Larisse Cordeiro de Moura
 - Protótipos: AlunoY
-- Testes: AlunoK
-- Documentação: Bianca Larisse Cordeiro de Moura
+- Desenvolvedor _front-end_: Conrado Calazans
+- Testes: Todos participantes testaram as aplicações.
+- Documentação: Bianca Larisse Cordeiro de Moura, Conrado Calazans
 
 ### Sprint 2
 - _Scrum master_: Bianca Larisse Cordeiro de Moura
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- Desenvolvedor _front-end_: Conrado Calazans, Thales Cauã Martins, Rafael Franklin
+- Desenvolvedor _back-end_: Bianca Larisse Cordeiro de Moura
+- Testes: Todos participantes testaram as aplicações.
 - 
 ### Sprint 3
 - _Scrum master_: Bianca Larisse Cordeiro de Moura
-- Desenvolvedor _front-end_: AlunoX
+- Desenvolvedor _front-end_: Thales Cauã Martins 
 - Desenvolvedor _back-end_: AlunoK
 - Testes: AlunaZ
 
@@ -38,7 +39,7 @@ Atualizado em: 21/04/2024
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Bianca Larisse Cordeiro de Moura        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 18/04/2025      |
 | Bianca Larisse Cordeiro de Moura        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️    |  18/04/2025  |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
+| Conrado Calazans de Souza  | Catálogo de Livros  | 25/04/2025     | 27/042025 | ✔️     |  27/04/2025   |
 | AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
 
 ## Sprint 2
