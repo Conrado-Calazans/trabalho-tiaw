@@ -78,7 +78,7 @@ As ferramentas empregadas no projeto são:
 
 - Editor de código.
 - Ferramentas de diagramação.
-- Frameworks 
+- <em>Frameworks</em> 
 - Outras ferramentas externas
 
 
