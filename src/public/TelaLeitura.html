@@ -1,0 +1,360 @@
+display: none; 
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de Livros</title> 
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+            min-height: 100vh;
+            color: #1565c0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #1976d2, #42a5f5);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e3f2fd;
+        }
+
+        .sidebar h3 {
+            color: #1565c0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .chapter-list {
+            list-style: none;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .chapter-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #e3f2fd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #1976d2;
+        }
+
+        .chapter-item:hover {
+            background: #e3f2fd;
+            padding-left: 10px;
+            border-radius: 8px;
+        }
+
+        .chapter-item.active {
+            background: linear-gradient(90deg, #e3f2fd, #bbdefb);
+            padding-left: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .reading-area {
+            flex: 1;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e3f2fd;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .book-title {
+            text-align: center;
+            color: #1565c0;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .chapter-title {
+            text-align: center;
+            color: #42a5f5;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .reading-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #1565c0;
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .placeholder-text {
+            color: #90caf9;
+            font-style: italic;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .reading-controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .page-control {
+            background: linear-gradient(135deg, #1976d2, #42a5f5);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+        }
+
+        .page-control:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+        }
+
+        .settings-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e3f2fd;
+            margin-top: 20px;
+        }
+
+        .settings-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .settings-row label {
+            color: #1565c0;
+            font-weight: 500;
+        }
+
+        .slider {
+            width: 100px;
+            height: 5px;
+            background: #e3f2fd;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #1976d2, #42a5f5);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(25, 118, 210, 0.3);
+        }
+
+        .progress-container {
+            background: #e3f2fd;
+            height: 8px;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #1976d2, #42a5f5);
+            height: 100%;
+            width: 35%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                order: 2;
+            }
+            
+            .reading-area {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>Índice</h3>
+                <ul class="chapter-list">
+                    <li class="chapter-item active">Capítulo 1</li>
+                    <li class="chapter-item">Capítulo 2</li>
+                    <li class="chapter-item">Capítulo 3</li>
+                    <li class="chapter-item">Capítulo 4</li>
+                    <li class="chapter-item">Capítulo 5</li>
+                    <li class="chapter-item">Capítulo 6</li>
+                </ul>
+
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <p style="text-align: center; color: #1565c0; font-size: 0.9rem;">Progresso: 35%</p>
+            </aside>
+
+            <main class="reading-area">
+                <h1 class="book-title">Título do Livro</h1>
+                <h2 class="chapter-title">Capítulo 1 - Introdução</h2>
+                
+                <div class="reading-content">
+                    <p class="placeholder-text">
+                        Aqui será exibido o conteúdo do livro...<br><br>
+                        O texto aparecerá com formatação adequada para uma leitura confortável,<br>
+                        com espaçamento otimizado e cores suaves em tons de azul.
+                    </p>
+                </div>
+
+                <div class="reading-controls">
+                    <button class="page-control">← Anterior</button>
+                    <button class="page-control">Próximo →</button>
+                </div>
+            </main>
+        </div>
+
+        <div class="settings-panel">
+            <div class="settings-row">
+                <label>Tamanho da Fonte:</label>
+                <input type="range" class="slider" min="12" max="24" value="18">
+            </div>
+            <div class="settings-row">
+                <label>Brilho:</label>
+                <input type="range" class="slider" min="50" max="100" value="80">
+            </div>
+            <div class="settings-row">
+                <label>Espaçamento:</label>
+                <input type="range" class="slider" min="1" max="3" step="0.1" value="1.8">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulação de interatividade básica
+        document.querySelectorAll('.chapter-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.chapter-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Controles de página
+        document.querySelectorAll('.page-control').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-3px)';
+                }, 100);
+            });
+        });
+
+        // Sliders de configuração
+        document.querySelectorAll('.slider').forEach(slider => {
+            slider.addEventListener('input', function() {
+                const readingContent = document.querySelector('.reading-content');
+                if (this.min === '12') { // Font size
+                    readingContent.style.fontSize = this.value + 'px';
+                } else if (this.min === '1') { // Line height
+                    readingContent.style.lineHeight = this.value;
+                }
+            });
+        });
+
+        function abrirLeitura() {
+    // Esconde todo o conteúdo do body, exceto a tela de leitura
+    document.querySelectorAll('body > *:not(#telaLeitura)').forEach(el => el.style.display = 'none');
+    document.getElementById('telaLeitura').style.display = 'block';
+  }
+  document.getElementById('fecharLeitura').onclick = function() {
+    // Mostra tudo de novo e esconde a tela de leitura
+    document.querySelectorAll('body > *:not(#telaLeitura)').forEach(el => el.style.display = '');
+    document.getElementById('telaLeitura').style.display = 'none';
+  };
+    </script>
+</body>
+</html>
