@@ -65,7 +65,7 @@ if (searchInput) {
               <p>${livro.descricao}</p>
               <p>${livro.autor ? 'Autor: ' + livro.autor + '<br>' : ''}Gênero: ${livro.genero.join(', ')}</p>
               <div class="card-actions">
-                <button onclick="openPDF('pdfs/${livro.pdf}')">Ler</button>
+                <button class="btn-ler" onclick="openPDF('pdfs/${livro.pdf}')">Ler</button>
               </div>
             </div>
           </div>
