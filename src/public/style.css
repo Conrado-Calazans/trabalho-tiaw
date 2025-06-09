@@ -691,5 +691,150 @@ footer {
   background-color: #d1c4e9;
 }
 
+/* Estilos para página de notas */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho da página de notas */
+.container h1 {
+    text-align: center;
+    color: #333;    
+    margin-bottom: 30px;
+}
+
+/* Formulário de notas */
+#noteForm {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Campos do formulário */
+#noteTitle {
+    width: 93%;
+    height: 45px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+#noteContent {
+    width: 93%;
+    height: 150px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    resize: vertical;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+#noteTitle:focus,
+#noteContent:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+/* Placeholder styles */
+#noteTitle::placeholder,
+#noteContent::placeholder {
+    color: #999;
+}
+
+/* Botões do formulário */
+#submitBtn,
+#cancelBtn {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#submitBtn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+}
+
+#submitBtn:hover {
+    background-color: #1976D2;
+}
+
+#cancelBtn {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+#cancelBtn:hover {
+    background-color: #da190b;
+}
+
+/* Seção de busca de notas */
+.notes-search-section {
+    margin-bottom: 20px;
+}
+
+.notes-search-section #searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Cards de notas */
+.note-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.note-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.note-content {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+/* Layout responsivo para notas */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
 
 
