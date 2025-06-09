@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     cadastroInput.value = dataFormatada;
   }
 })
- // Campo de busca global
-  
- function removerAcentos(texto) {
+
+// Campo de busca global
+function removerAcentos(texto) {
   return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
@@ -85,6 +85,24 @@ function createResultContainer(afterElement) {
   return div;
 }
 
+// Modal de notificações
+const notificacoesBtn = document.getElementById("notificacoesBtn");
+const notificacoesModal = document.getElementById("notificacoesModal");
+const fecharNotificacoes = document.getElementById("fecharNotificacoes");
+
+notificacoesBtn.onclick = () => {
+  notificacoesModal.style.display = "block";
+};
+
+fecharNotificacoes.onclick = () => {
+  notificacoesModal.style.display = "none";
+};
+
+window.onclick = (event) => {
+  if (event.target == notificacoesModal) {
+    notificacoesModal.style.display = "none";
+  }
+};
 
 // Modal de Autenticação
 const modal = document.getElementById('authModal');

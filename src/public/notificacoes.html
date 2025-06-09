@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notificações</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Header com logo e menu -->
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <div class="textos">
+          <h1>Biblioteca Digital</h1>
+          <p>Explore conhecimento de forma simples e acessível</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="secondary-header">
+    <div class="menu">  
+      <a href="catalogo.html">Catalogo de livros</a>
+      <a href="favoritos.html">Livros Favoritos</a>
+      <a href="minha_conta.html">Minha Conta</a>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar livros por título, autor ou palavra-chave  ">
+        <a class="search-btn">
+          <img src="images/lupa.png" alt="">
+        </a>
+      </div>            
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal de Notificações -->
+  <main class="notificacoes-container">
+    <h2>Notificações</h2>
+    <ul class="notificacoes-lista">
+      <li>📢 Novo livro adicionado: <strong>"1984" </strong> do autor George Orwell</li>
+      <li>📌 Atualização no livro <strong>"Memórias Póstumas de Brás Cubas"</strong> disponível</li>
+      <li>📚 Sugestões baseadas em seus favoritos foram adicionadas</li>
+      <li>🚀 Novas categorias: <strong>Biografias</strong> e <strong>Autoajuda</strong></li>
+    </ul>
+  </main>
+
+   <div class="voltar-container">
+    <a href="index.html" class="btn-voltar">Voltar à página inicial</a>
+  </div>
+  
+  <footer>
+    <div class="footer-links">
+      <a href="#">Produtos</a>
+      <a href="#">Parcerias</a>
+      <a href="#">Recursos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+    <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
+  </footer>
+  <script src="script.js"></script>
+
+  <!-- Modal de Login (pode ser removido se não for usado) -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <div class="auth-tabs">
+        <button class="tab-btn active" onclick="mostrarLogin()">Entrar</button>
+        <button class="tab-btn" onclick="mostrarCadastro()">Cadastrar</button>
+      </div>
+      <div class="auth-forms">
+        <form id="loginForm" class="active">
+          <input type="text" placeholder="Email ou usuário">
+          <input type="password" placeholder="Senha">
+          <div class="lembrar-senha">
+            <input type="checkbox" id="lembrar">
+            <label for="lembrar">Lembrar-me</label>
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        <form id="cadastroForm">
+          <input type="text" placeholder="Nome completo">
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Senha">
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function abrirModal() {
+      document.getElementById('authModal').style.display = 'block';
+    }
+
+    function fecharModal() {
+      document.getElementById('authModal').style.display = 'none';
+    }
+
+    function mostrarLogin() {
+      document.getElementById('loginForm').classList.add('active');
+      document.getElementById('cadastroForm').classList.remove('active');
+      document.querySelectorAll('.tab-btn')[0].classList.add('active');
+      document.querySelectorAll('.tab-btn')[1].classList.remove('active');
+    }
+
+    function mostrarCadastro() {
+      document.getElementById('loginForm').classList.remove('active');
+      document.getElementById('cadastroForm').classList.add('active');
+      document.querySelectorAll('.tab-btn')[0].classList.remove('active');
+      document.querySelectorAll('.tab-btn')[1].classList.add('active');
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('authModal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
