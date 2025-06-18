@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Capítulo Aberto</title>
+  <link rel="stylesheet" href="style.css"/>  
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/CA_logo.png" alt="Capítulo Aberto" />
+        <div class="textos">
+          <h1>Biblioteca online gratuita</h1>
+          <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
+          <button class="explorar-btn" id="explorarBtn">Explorar</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="secondary-header">
+    <div class="menu">
+      <a href="favoritos.html">Favoritos</a>
+      <a href="minha_conta.html">Minha Conta</a>      
+    </div>
+  </header>
+  
+  <section class="cadastro-container">
+    <div class="form-cadastro">
+      <h2>Nova conta <img src="images/profile-icon.png" alt="Ícone de perfil" class="profile-icon"></h2>
+      
+      <form id="registerForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmarSenha">Confirmar Senha</label>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nascimento">Data de Nascimento</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cadastro">Data de Cadastro</label>
+            <input type="date" id="cadastro" name="cadastro" readonly>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn-salvar">Cadastrar</button>
+          <button type="button" class="btn-cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Produtos</a>
+      <a href="#">Parcerias</a>
+      <a href="#">Recursos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+    <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

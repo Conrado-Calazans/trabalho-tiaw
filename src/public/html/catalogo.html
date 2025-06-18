@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="content-type" content="application/pdf">
+  <meta name="X-UA-Compatible" content="IE=edge">
+  <title>Favoritos - Capítulo Aberto</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/CA_logo.png" alt="Capítulo Aberto" />
+        <div class="textos">
+          <h1>Biblioteca online gratuita</h1>
+          <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="secondary-header">
+    <div class="menu">  
+      <a href="favoritos.html">Livros Favoritos</a>
+      <a href="minha_conta.html">Minha Conta</a>
+      <a href="notas.html">Adicionar Notas (Teste)</a>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar livros por título, autor ou palavra-chave  ">
+        <a class="search-btn">
+          <img src="images/lupa.png" alt="">
+        </a>
+      </div>            
+    </div>
+  </header>
+
+
+  <section class="favoritos-container">
+    <h2>Catálogo de livros</h2>
+    <div class="livros-grid">
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/salvar-democracia.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>Como Salvar a Democracia</h3>
+          <p class="descricao">A obra reúne contribuições de acadêmicos e especialistas renomados que oferecem análises profundas e propostas concretas para fortalecer os pilares democráticos.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/livro.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/arte_guerra.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>A Arte da Guerra</h3>
+          <p class="descricao">O livro ensina princípios de liderança, tática e estratégia que vão além do campo de batalha, sendo amplamente aplicado em áreas como negócios, política e desenvolvimento pessoal. </p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/arte_guerra.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/o_principe.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>O Príncipe</h3>
+          <p class="descricao">É um tratado político escrito no século XVI que oferece conselhos diretos sobre como conquistar, manter e exercer o poder.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/o_principe_maquiavel.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+       <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/bras-cubas.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>Memórias Póstumas de Brás Cubas</h3>
+          <p class="descricao">É um romance publicado em 1881 e considerado uma das obras mais importantes da literatura brasileira. O livro é marcado pelo tom irônico, pelas críticas à sociedade brasileira do século XIX e pela inovação formal.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/memoriasBras.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+       <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/capitaes-areia.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>Capitães da Areia</h3>
+          <p class="descricao">Esse livro denuncia as injustiças sociais e a marginalização da infância abandonada, com uma linguagem rica e sensível que mistura crítica social e lirismo. É considerada uma das obras mais importantes da literatura brasileira do século XX.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/capitaes-da-areia.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+       <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/o-cortico.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>O cortiço</h3>
+          <p class="descricao">É um romance naturalista escrito por Aluísio Azevedo, publicado em 1890. A obra retrata a vida num cortiço — uma habitação coletiva — no Rio de Janeiro do século XIX, expondo o cotidiano de seus moradores, suas relações, conflitos e a dura realidade social marcada por pobreza, exploração e preconceito.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/cortico.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/inteligencia-emocional.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>Inteligência Emocional</h3>
+          <p class="descricao">É um livro publicado em 1995 que revolucionou a forma como se entende a inteligência humana. Goleman argumenta que o sucesso pessoal e profissional não depende apenas do QI, mas também da capacidade de reconhecer, compreender e gerenciar as próprias emoções e as dos outros — inteligência emocional.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/inteligencia-emocional.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/1984.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>1984</h3>
+          <p class="descricao">É um romance distópico publicado em 1949. A obra retrata um futuro sombrio em que o mundo é governado por regimes totalitários. A história se passa na fictícia Oceânia, onde o Partido, liderado pelo enigmático Grande Irmão, controla todos os aspectos da vida — desde os pensamentos das pessoas até a história oficial.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/livro-1984.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="livro-card">
+        <div class="livro-icon">
+          <img src="images/subsolo.jpg" alt="Ícone do livro">
+        </div>
+        <div class="livro-info">
+          <h3>Memórias do Subsolo</h3>
+          <p class="descricao">Escrito por Fiódor Dostoiévski e publicado em 1864, é um romance psicológico considerado precursor do existencialismo. A obra é narrada por um homem amargurado e recluso — o homem do subsolo — que vive isolado da sociedade em São Petersburgo.</p>
+          <div class="card-actions">
+            <button class="btn-ler" onclick="openPDF('pdfs/memorias-subsolo.pdf')">Ler</button>
+            <button class="btn-favorito active">
+              <img src="images/heart-filled.png" alt="Favorito">
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    </div>    
+  </section>
+  
+  <div class="voltar-container">
+    <a href="index.html" class="btn-voltar">Voltar à página inicial</a>
+  </div>
+  
+  <footer>
+    <div class="footer-links">
+      <a href="#">Produtos</a>
+      <a href="#">Parcerias</a>
+      <a href="#">Recursos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+    <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

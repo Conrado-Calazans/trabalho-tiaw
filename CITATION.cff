@@ -2,12 +2,12 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Capitulo Aberto
 authors:
-  - family-names: Franqlin
+  - family-names: Franklin
     given-names: Rafael
   - family-names: Cordeiro
     given-names: Bianca
-  - family-names: Carmo
-    given-names: Andre
+  - family-names: Felipe
+    given-names: Arthur
   - family-names: Calazans
     given-names: Conrado
   - family-names: Caua
