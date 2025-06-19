@@ -3,8 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .social-login {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .google {
+      background: #db4437;
+      color: white;
+    }
+
+    .facebook {
+      background: #3b5998;
+      color: white;
+    }
+
+    .social-btn i {
+      font-size: 1.2rem;
+    }
+
+    .login-link {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .login-link a {
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Cadastrar</h2>
+    <form>
+      <input type="text" placeholder="Nome completo" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Senha" required />
+      <input type="password" placeholder="Confirmar senha" required />
+      <button type="submit">Criar Conta</button>
+    </form>
+    <div class="social-login">
+      <button class="social-btn google">
+        <i class="fab fa-google"></i> Cadastrar com Google
+      </button>
+      <button class="social-btn facebook">
+        <i class="fab fa-facebook-f"></i> Cadastrar com Facebook
+      </button>
+    </div>
+<div class="login-link">
+  Já tem uma conta? <a href="login.html">Entrar</a>
+</div>
+  </div>
+</body>
+</html>
+
+<!-- CONTEÚDO QUE ESTAVA EM OUTRA PÁGINA "CADASTRO.HTML"
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro - Capítulo Aberto</title>
-  <link rel="stylesheet" href="style.css"/>  
+  <link rel="stylesheet" href="/src/public/css/style.css"/>  
 </head>
 <body>
   <header>
@@ -85,4 +223,5 @@
 
   <script src="script.js"></script>
 </body>
-</html>
+</html>-->
+

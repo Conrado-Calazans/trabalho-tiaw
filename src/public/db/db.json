@@ -71,12 +71,39 @@
         "descricao": "É um tratado político escrito no século XVI que oferece conselhos diretos sobre como conquistar, manter e exercer o poder.",
         "imagem": "o_principe.jpg",
         "pdf": "o_principe_maquiavel.pdf"
+      },
+      {
+        "idLivro": "007",
+        "titulo": "Inteligência Emocional",
+        "autor": "Daniel Goleman",
+        "genero": ["Autoajuda", "Psicologia"],
+        "descricao": "É um livro publicado em 1995 que revolucionou a forma como se entende a inteligência humana. Goleman argumenta que o sucesso pessoal e profissional não depende apenas do QI, mas também da capacidade de reconhecer, compreender e gerenciar as próprias emoções e as dos outros — inteligência emocional.",
+        "imagem": "inteligencia-emocional.jpg",
+        "pdf": "inteligencia-emocional.pdf"
+      },
+      {
+        "idLivro": "008",
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "genero": ["Romance", "Distopia"],
+        "descricao": "É um romance distópico publicado em 1949. A obra retrata um futuro sombrio em que o mundo é governado por regimes totalitários. A história se passa na fictícia Oceânia, onde o Partido, liderado pelo enigmático Grande Irmão, controla todos os aspectos da vida — desde os pensamentos das pessoas até a história oficial.",
+        "imagem": "1984.jpg",
+        "pdf": "livro-1984.pdf"
+      },
+       {
+        "idLivro": "009",
+        "titulo": "Memórias do Subsolo",
+        "autor": "Fiódor Dostoiévski",
+        "genero": ["Romance", "Psicologia"],
+        "descricao": "Escrito por Fiódor Dostoiévski e publicado em 1864, é um romance psicológico considerado precursor do existencialismo. A obra é narrada por um homem amargurado e recluso — o homem do subsolo — que vive isolado da sociedade em São Petersburgo.",
+        "imagem": "subsolo.jpg",
+        "pdf": "memorias-subsolo.pdf"
       }
       
     ],
     "metadata": {
       "lastUpdate": "2025-05-17T00:00:00Z",
-      "totalItems": 6
+      "totalItems": 9
     }
   }
 }
