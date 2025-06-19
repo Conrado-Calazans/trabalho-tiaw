@@ -5,9 +5,13 @@ Trabalho Interdisciplinar - Aplicacões Web
 
 `CURSO`: Sistemas de Informação e Analise e Desenvolvimento de Sistemas
 
-`SEMESTRE:` 
+`SEMESTRE:` 1° semestre/2025.
 
-`OBJETIVO ODS:` > Inclua os numeros e a descrição do(s) objetivo(s) ODS da ONU que o Projeto vai atender. 
+`OBJETIVO ODS:` <strong>ODS 4 – Educação de Qualidade</strong>: O projeto contribui diretamente para esse objetivo ao oferecer acesso gratuito a livros, ampliando as oportunidades de aprendizagem para pessoas de todas as idades e origens sociais.
+
+<strong>ODS 10 – Redução das Desigualdades</strong>: Ao garantir o acesso universal e gratuito a materiais educativos, o projeto ajuda a diminuir a desigualdade educacional entre grupos sociais com menos acesso a recursos.
+
+<strong>ODS 17 – Parcerias e Meios de Implementação</strong>: O projeto envolve colaborações com editoras, instituições de ensino ou organizações sociais. Portanto, ele também fortalece parcerias em prol da educação acessível.
 
 ## Participantes
 
