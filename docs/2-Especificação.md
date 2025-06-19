@@ -7,31 +7,31 @@
 > realizar a especificações do projeto
 
 ## Mapa de Stakeholders
-<img src="images/1.jpg" alt="Mapa de Stakeholders"> 
+<img src="/docs/images-projeto/1.jpg" alt="Mapa de Stakeholders"> 
 
 ## Matriz de Alinhamento
-<img src="images/2.jpg" alt="Matriz de Alinhamento"> 
+<img src="/docs/images-projeto/2.jpg" alt="Matriz de Alinhamento"> 
 
 ## Diagramas de Personas
-<img src="images/DP.jpg" alt="Diagramas de Personas"> 
+<img src="/docs/images-projeto/DP.jpg" alt="Diagramas de Personas"> 
 
 ## Mapa de Priorização
-<img src="images/mapa_priorização.png" alt="Mapa de Priorização"> 
+<img src="/docs/images-projeto/mapa_priorização.png" alt="Mapa de Priorização"> 
 
 ## Mural de Possibilidades
-<img src="images/mural_possibilidades.png" alt="Mural de Possibilidades"> 
+<img src="/docs/images-projeto/mural_possibilidades.png" alt="Mural de Possibilidades"> 
 
 ## Personas
 
-<img src="images/persona1.png" alt="Rodrigo - Persona 1" width="250px"> 
+<img src="/docs/images-projeto/persona1.png" alt="Rodrigo - Persona 1" width="250px"> 
 
 Rodrigo tem 23 anos, é auxiliar administrativo e usa seus momentos livres — como o trajeto para o trabalho — para mergulhar em conteúdos digitais através do <em>smartphone</em>. Apaixonado por ficção científica, quadrinhos e <em>podcasts</em>, ele é introvertido, curioso e determinado. Rodrigo sonha em aprofundar seu conhecimento, melhorar sua comunicação e ingressar na faculdade. Para ele, uma plataforma ideal deve ser acessível, sem burocracia, alinhada aos seus interesses e oferecer incentivos para manter o hábito da leitura. Complexidade, falta de acessibilidade e limitações sem motivo afastariam Rodrigo da experiência desejada.
 
-<img src="images/persona2.png" alt="Mariana - Persona 2" width="250px"> 
+<img src="/docs/images-projeto/persona2.png" alt="Mariana - Persona 2" width="250px"> 
 
 Aos 32 anos, Mariana é professora de literatura e pesquisadora em educação digital. Apaixonada por ler artigos sobre literatura e tecnologia, ela utiliza dispositivos como <em>tablets</em> e <em>smartphones</em> para se manter atualizada e organizada em seus estudos. Intelectual e curiosa, Mariana sonha em publicar um livro e transformar a educação com o uso da tecnologia. Para se conectar com ela, é essencial oferecer suporte empático, respeitar sua trajetória acadêmica e garantir acesso acessível e bem estruturado ao conteúdo. Mariana valoriza transparência, organização e inovação — e se afasta de experiências confusas ou que desvalorizem a educação.
 
-<img src="images/persona3.png" alt="Gabriel - Persona 3" width="250px"> 
+<img src="/docs/images-projeto/persona3.png" alt="Gabriel - Persona 3" width="250px"> 
 
 Gabriel tem 27 anos, é estudante de pós-graduação em Ciência da Informação e também atua como analista de TI. Ele gosta de escrever sobre tecnologia e educação, além de fotografar bibliotecas e ambientes acadêmicos. Com uma personalidade analítica, empática e inclusiva, Gabriel busca equilibrar sua vida profissional e pessoal enquanto contribui com a evolução da educação tecnológica. Para ele, o acesso a conteúdo relevante, colaboração e valorização do progresso acadêmico são fundamentais. Plataformas que ignoram a troca de ideias ou impõem soluções sem base técnica não têm espaço no seu dia a dia.
 

@@ -9,16 +9,16 @@
 > Projeto](2-Especificação.md).
 
 ## Fluxo do Usuário
-<img src="images/diagrama1_melhorada.jpg" alt="Diagrama 1">
-<img src="images/diagrama2_melhorada.jpg" alt="Diagrama 2">
+<img src="/docs/images-projeto/diagrama1_melhorada.jpg" alt="Diagrama 1">
+<img src="/docs/images-projeto/diagrama2_melhorada.jpg" alt="Diagrama 2">
 
 ## Wireframes
-<img src="images/Wireframe.png" alt="Wireframe">
+<img src="/docs/images-projeto/Wireframe.png" alt="Wireframe">
 
 ## Prints do Protótipo Interativo
-<img src="images/prototipo_1.png" alt="Print 1">
-<img src="images/prototipo_2.png" alt="Print 2">
-<img src="images/prototipo_3.png" alt="Print 3">
+<img src="/docs/images-projeto/prototipo_1.png" alt="Print 1">
+<img src="/docs/images-projeto/prototipo_2.png" alt="Print 2">
+<img src="/docs/images-projeto/prototipo_3.png" alt="Print 3">
 
 > **Links Úteis**:
 > - [Repositório do Protótipo Interativo](https://github.com/Leafar8/prototipo_capitulo_aberto.git)

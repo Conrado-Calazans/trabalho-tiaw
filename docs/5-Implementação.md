@@ -76,7 +76,7 @@ Para funcionalidades como marcação de progresso de leitura e favoritos, será 
 Os arquivos do projeto (<em>HTML</em>, <em>CSS</em>, <em>JS</em> e livros digitais) serão versionados e hospedados no <em>GitHub Pages</em>, tornando o acesso ao sistema fácil e gratuito.
 
 <p><strong>Diagrama de Arquitetura do Grupo</strong></p>  
-<img src="images/diagrama_arquitetura.jpg" alt="Diagrama de Arquitetura">
+<img src="/docs/images-projeto/diagrama_arquitetura.jpg" alt="Diagrama de Arquitetura">
 
 # Interface do Sistema
 

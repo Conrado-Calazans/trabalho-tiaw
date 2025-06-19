@@ -3,7 +3,7 @@
 > Aqui será feito o gerenciamento das tarefas de implementação do projeto.
 
 ## Divisão de Papéis
-<img src="images/divisao_papeis.png" alt="Divisão de Papéis">
+<img src="/docs/images-projeto/divisao_papeis.png" alt="Divisão de Papéis">
 
   
 ### Sprint 1
@@ -27,7 +27,7 @@
 
   
 ## Quadro de tarefas
-<img src="images/quadro_tarefas.png" alt="Quadro de Tarefas">
+<img src="/docs/images-projeto/quadro_tarefas.png" alt="Quadro de Tarefas">
 
 
 
