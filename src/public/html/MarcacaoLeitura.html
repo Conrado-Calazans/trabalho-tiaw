@@ -122,6 +122,7 @@
       <div class="acoes">
         <button onclick="marcarComoConcluido(this)">Concluir Leitura</button>
         <button onclick="editarNotas(this)">Editar Notas</button>
+        <button onclick="removerLivro(this)">Remover</button>
       </div>
     </div>
 
@@ -133,6 +134,7 @@
       <div class="acoes">
         <button onclick="reiniciarLeitura(this)">Reiniciar Leitura</button>
         <button onclick="editarNotas(this)">Editar Notas</button>
+        <button onclick="removerLivro(this)">Remover</button>
       </div>
     </div>
 
@@ -144,6 +146,7 @@
       <div class="acoes">
         <button onclick="marcarComoLendo(this)">Começar Leitura</button>
         <button onclick="editarNotas(this)">Adicionar Notas</button>
+        <button onclick="removerLivro(this)">Remover</button>
       </div>
     </div>
   </div>
@@ -187,6 +190,10 @@
       notaSpan.style.display = 'none';
       notaSpan.parentNode.appendChild(textarea);
       botao.parentNode.appendChild(salvar);
+    }
+        function removerLivro(botao) {
+      const livro = botao.closest('.livro');
+      livro.remove();
     }
   </script>
 </body>
