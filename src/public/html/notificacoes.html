@@ -7,28 +7,26 @@
   <link rel="stylesheet" href="/src/public/css/style.css"/>
 </head>
 <body>
-
-  <!-- Header com logo e menu -->
   <header>
     <div class="top-bar">
       <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="/src/public/images/Logo.png" alt="Logo">
         <div class="textos">
           <h1>Biblioteca Digital</h1>
-          <p>Explore conhecimento de forma simples e acessível</p>
+          <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
         </div>
       </div>
     </div>
 
     <header class="secondary-header">
     <div class="menu">  
-      <a href="catalogo.html">Catalogo de livros</a>
-      <a href="favoritos.html">Livros Favoritos</a>
-      <a href="minha_conta.html">Minha Conta</a>
+      <a href="/src/public/html/catalogo.html">Catalogo de livros</a>
+      <a href="/src/public/html/favoritos.html">Livros Favoritos</a>
+      <a href="/src/public/html/minha_conta.html">Minha Conta</a>
       <div class="search-box">
         <input type="text" id="searchInput" placeholder="Pesquisar livros por título, autor ou palavra-chave  ">
         <a class="search-btn">
-          <img src="images/lupa.png" alt="">
+          <img src="/src/public/images/lupa.png" alt="">
         </a>
       </div>            
     </div>
@@ -46,7 +44,7 @@
   </main>
 
    <div class="voltar-container">
-    <a href="index.html" class="btn-voltar">Voltar à página inicial</a>
+    <a href="/src/public/html/index.html" class="btn-voltar">Voltar à página inicial</a>
   </div>
   
   <footer>
@@ -59,9 +57,9 @@
     </div>
     <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
   </footer>
-  <script src="script.js"></script>
+  <script src="/src/public/scripts/script.js"></script>
 
-  <!-- Modal de Login (pode ser removido se não for usado) -->
+  <!-- Modal de Login -->
   <div id="authModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="fecharModal()">&times;</span>
