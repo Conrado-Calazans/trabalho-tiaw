@@ -1,0 +1,181 @@
+/* Centraliza o conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 60vh;
+    width: 100%;
+}
+
+/* Centraliza o formulário de adicionar livro */
+#book-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 32px auto 24px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#book-form h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+#add-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+#add-book-form input,
+#add-book-form textarea,
+#add-book-form button {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#add-book-form button {
+    background: #00baff;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#add-book-form button:hover {
+    background: #0095cc;
+}
+
+/* Centraliza a lista de livros */
+#book-list {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+}
+
+#book-list h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+/* Centraliza os cards de livros */
+#livros {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 40px auto;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+/* Card de livro */
+.book-card {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px;
+    width: 370px;
+    min-height: 180px;
+    margin: 0 auto;
+    transition: box-shadow 0.2s;
+}
+
+.book-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.book-cover {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 18px;
+    background: #f2f2f2;
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+}
+
+.book-desc {
+    font-size: 0.98rem;
+    color: #444;
+    margin: 0 0 16px 0;
+}
+
+.book-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.read-btn {
+    background: #00baff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.read-btn:hover {
+    background: #0095cc;
+}
+
+.favorite {
+    color: #ff2222;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 8px;
+}
+
+/* Centraliza o rodapé */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 8px;
+}
+
+.footer-copy {
+    color: #888;
+    font-size:0.95rem;
+}
+
+/* Labels do formulário em negrito */
+#add-book-form label {
+    font-weight: bold;
+}
+
