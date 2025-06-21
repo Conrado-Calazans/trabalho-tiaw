@@ -48,7 +48,31 @@
       </div>
     </div>
   </main>
+<script>
+  const form = document.getElementById('form-cadastro');
 
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    const confirmaSenha = document.getElementById('confirma-senha').value;
+
+    if (senha !== confirmaSenha) {
+      document.getElementById('mensagem').textContent = "As senhas não coincidem.";
+      return;
+    }
+
+    // Salva no localStorage
+    localStorage.setItem('usuario', JSON.stringify({
+      nome: nome,
+      email: email
+    }));
+   window.location.href = 'Login.html';
+    window.location.href = 'minha-conta.html';
+  });
+</script>
   <script src="/script/auth.js"></script>
 </body>
 </html>
