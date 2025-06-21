@@ -32,7 +32,7 @@ if (searchInput) {
     const container = document.querySelector('.livros-grid') || createResultContainer(this);
 
     try {
-      const res = await fetch('db.json');
+      const res = await fetch('/src/public/db/db.json');
       const data = await res.json();
       const livros = data.livros.items;
 
@@ -50,6 +50,7 @@ if (searchInput) {
         );
       });
 
+
       container.innerHTML = resultados.length
         ? ''
         : '<p>Nenhum livro encontrado.</p>';
@@ -58,14 +59,14 @@ if (searchInput) {
         container.innerHTML += `
           <div class="livro-card">
             <div class="livro-icon">
-              <img src="images/${livro.imagem}" alt="${livro.titulo}">
+              <img src="/src/public/images/${livro.imagem}" alt="${livro.titulo}">
             </div>
             <div class="livro-info">
               <h3>${livro.titulo}</h3>
               <p>${livro.descricao}</p>
               <p>${livro.autor ? 'Autor: ' + livro.autor + '<br>' : ''}Gênero: ${livro.genero.join(', ')}</p>
               <div class="card-actions">
-                <button class="btn-ler" onclick="openPDF('pdfs/${livro.pdf}')">Ler</button>
+                <button class="btn-ler" onclick="openPDF('/src/public/pdfs/${livro.pdf}')">Ler</button>
               </div>
             </div>
           </div>
@@ -137,6 +138,7 @@ window.addEventListener('click', (e) => {
   }
 });
 
+
 // Alternar entre tabs
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -170,6 +172,8 @@ document.getElementById('registerForm')?.addEventListener('submit', (e) => {
   console.log('Register submit');
 });
 
+
+
 function openPDF(pdfPath) {
   window.open(pdfPath, '_blank', `
     toolbar=no,
@@ -182,3 +186,4 @@ function openPDF(pdfPath) {
     height=600
   `);
 }
+
