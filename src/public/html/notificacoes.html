@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,16 +39,21 @@
     </div>
   </header>
 
-  <!-- Conteúdo Principal de Notificações -->
-  <main class="notificacoes-container">
-    <h2>Notificações</h2>
-    <ul class="notificacoes-lista">
-      <li>📢 Novo livro adicionado: <strong>"1984" </strong> do autor George Orwell</li>
-      <li>📌 Atualização no livro <strong>"Memórias Póstumas de Brás Cubas"</strong> disponível</li>
-      <li>📚 Sugestões baseadas em seus favoritos foram adicionadas</li>
-      <li>🚀 Novas categorias: <strong>Biografias</strong> e <strong>Autoajuda</strong></li>
-    </ul>
-  </main>
+<main class="notificacoes-container">
+  <h2>Notificações de Livros</h2>
+
+ <form id="formNovaNotificacao">
+  <input type="text" id="tituloLivro" placeholder="Título do livro" required />
+  <input type="text" id="descricaoLivro" placeholder="Descrição (opcional)" />
+  <input type="text" id="imagemLivro" placeholder="Nome do arquivo da imagem (ex: livro1.png)" required />
+  <button type="submit">Adicionar Notificação</button>
+</form>
+
+
+  <!-- Lista dinâmica -->
+  <ul class="notificacoes-lista" id="listaNotificacoes"></ul>
+</main>
+
 
    <div class="voltar-container">
     <a href="/src/public/html/index.html" class="btn-voltar">Voltar à página inicial</a>
@@ -118,6 +130,94 @@
       }
     }
   </script>
+
+<script>
+  const listaEl = document.getElementById("listaNotificacoes");
+  const formEl = document.getElementById("formNovaNotificacao");
+  const imagemEl = document.getElementById("imagemLivro");
+  const tituloEl = document.getElementById("tituloLivro");
+  const descEl = document.getElementById("descricaoLivro");
+
+  // Carregar notificações salvas
+  function carregarNotificacoes() {
+    const notificacoes = JSON.parse(localStorage.getItem("notificacoes")) || [];
+    listaEl.innerHTML = "";
+
+    notificacoes.forEach((notificacao, index) => {
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <div style="display: flex; align-items: center; gap: 10px;">
+      ${notificacao.imagem ? `<img src="/src/public/images/${notificacao.imagem}" alt="${notificacao.titulo}" style="width: 60px; height: auto; border-radius: 4px;">` : ""}
+      <div>
+        <strong>📖 ${notificacao.titulo}</strong><br>
+        🗒️ ${notificacao.descricao || "Sem descrição"}
+      </div>
+    </div>
+    <div>
+      <button onclick="editarNotificacao(${index})">✏️</button>
+      <button onclick="removerNotificacao(${index})">🗑️</button>
+    </div>
+  `;
+  li.style.marginBottom = "15px";
+  li.style.borderBottom = "1px solid #ccc";
+  li.style.paddingBottom = "10px";
+  listaEl.appendChild(li);
+});
+
+  }
+
+  // Adicionar nova notificação
+  formEl.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const novaNotificacao = {
+    titulo: tituloEl.value.trim(),
+    descricao: descEl.value.trim(),
+    imagem: imagemEl.value.trim() || null
+  };
+
+  const notificacoes = JSON.parse(localStorage.getItem("notificacoes")) || [];
+  notificacoes.push(novaNotificacao);
+  localStorage.setItem("notificacoes", JSON.stringify(notificacoes));
+
+  formEl.reset();
+  carregarNotificacoes();
+});
+
+
+  function editarNotificacao(index) {
+  const notificacoes = JSON.parse(localStorage.getItem("notificacoes")) || [];
+  const atual = notificacoes[index];
+
+  const novoTitulo = prompt("Editar título:", atual.titulo);
+  const novaDescricao = prompt("Editar descrição:", atual.descricao);
+  const novaImagem = prompt("Editar nome da imagem (ex: livro1.png):", atual.imagem || "");
+
+  if (novoTitulo !== null) {
+    notificacoes[index] = {
+      titulo: novoTitulo.trim() || atual.titulo,
+      descricao: novaDescricao !== null ? novaDescricao.trim() : atual.descricao,
+      imagem: novaImagem !== null ? novaImagem.trim() : atual.imagem
+    };
+
+    localStorage.setItem("notificacoes", JSON.stringify(notificacoes));
+    carregarNotificacoes();
+  }
+}
+
+  // Remover notificação
+  function removerNotificacao(index) {
+    const notificacoes = JSON.parse(localStorage.getItem("notificacoes")) || [];
+    if (confirm("Tem certeza que deseja excluir esta notificação?")) {
+      notificacoes.splice(index, 1);
+      localStorage.setItem("notificacoes", JSON.stringify(notificacoes));
+      carregarNotificacoes();
+    }
+  }
+
+  // Inicializar
+  carregarNotificacoes();
+</script>
 
 </body>
 </html>
