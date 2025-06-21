@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Favoritos - Capítulo Aberto</title>
-  <link rel="stylesheet" href="/src/public/css/style.css" />  
-</head>
 <body>
   <header>
     <div class="top-bar">
@@ -19,23 +13,148 @@
       </div>
     </div>
   </header>
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
 
-  <header class="secondary-header">
-    <div class="menu">
-      <a href="/src/public/html/favoritos.html">Favoritos</a>
-      <a href="/src/public/html/minha_conta.html">Minha Conta</a>      
+    header {
+      background-color: #00aaff;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .search-bar input {
+      padding: 6px 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border: 2px solid cornflowerblue;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .user-info {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .logout-btn {
+      margin-top: 30px;
+      width: 100%;
+      padding: 12px;
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background-color: #c9302c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+      <nav>
+    <a href="#" id="link-favoritos">Livros Favoritos</a>
+    <a href="catalogo.html">Catalogo</a>
+    <a href="admin.html">Adicionar Livro</a>
+    <a href="minha_conta.html">Minha Conta</a>
+    <a href="index.html">Sair</a>
+    <span class="search">
+      <input type="text" placeholder="Pesquisar livros...">
+      <button>🔍</button>
+    </span>
+  </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar livros..."/>
     </div>
-  </header> 
+  </header>
 
-  <section class="em-breve-container">
-    <div class="em-breve-mensagem">
-      <h2>Em Desenvolvimento</h2>
-      <p>Esta funcionalidade será implementada em breve!</p>
-      <a href="/src/public/html/index.html" class="btn-voltar">Voltar à página inicial</a>
+  <main>
+    <h2>Minha Conta</h2>
+    <div class="user-info" id="user-info">
+      Carregando informações...
     </div>
-  </section>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+  </main>
 
+  <script>
+    const userData = localStorage.getItem('usuario');
 
+    if (userData) {
+      const usuario = JSON.parse(userData);
+      document.getElementById('user-info').innerHTML = `
+        <p><strong>Nome:</strong> ${usuario.nome}</p>
+        <p><strong>Email:</strong> ${usuario.email}</p>
+      `;
+    } else {
+      document.getElementById('user-info').innerHTML = "<p>Nenhuma informação de usuário encontrada.</p>";
+    }
+
+    function logout() {
+      localStorage.removeItem('usuario');
+      window.location.href = "login.html";
+    }
+  </script>
+  <script src="/src/public/scripts/script.js"></script>
   <footer>
     <div class="footer-links">
       <a href="#">Produtos</a>
