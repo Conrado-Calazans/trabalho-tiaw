@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,11 +23,6 @@
       <a href="/src/public/html/catalogo.html">Catálogo de livros</a>
       <a href="/src/public/html/favoritos.html">Livros Favoritos</a>
       <a href="/src/public/html/minha_conta.html">Minha Conta</a>
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Pesquisar livros por título, autor ou palavra-chave  ">
-        <a class="search-btn">
-          <img src="/src/public/images/lupa.png" alt="">
-        </a>
       </div>            
     </div>
   </header>
@@ -46,6 +34,7 @@
   <input type="text" id="tituloLivro" placeholder="Título do livro" required />
   <input type="text" id="descricaoLivro" placeholder="Descrição (opcional)" />
   <input type="text" id="imagemLivro" placeholder="Nome do arquivo da imagem (ex: livro1.png)" required />
+  <input type="text" id="pdfLivro" placeholder="Nome do arquivo PDF (ex: 1984.pdf)" required />
   <button type="submit">Adicionar Notificação</button>
 </form>
 
@@ -135,6 +124,7 @@
   const listaEl = document.getElementById("listaNotificacoes");
   const formEl = document.getElementById("formNovaNotificacao");
   const imagemEl = document.getElementById("imagemLivro");
+  const pdfEl = document.getElementById("pdfLivro");
   const tituloEl = document.getElementById("tituloLivro");
   const descEl = document.getElementById("descricaoLivro");
 
@@ -149,7 +139,7 @@
     <div style="display: flex; align-items: center; gap: 10px;">
       ${notificacao.imagem ? `<img src="/src/public/images/${notificacao.imagem}" alt="${notificacao.titulo}" style="width: 60px; height: auto; border-radius: 4px;">` : ""}
       <div>
-        <strong>📖 ${notificacao.titulo}</strong><br>
+        <strong>📖 <a href="/src/public/pdfs/${notificacao.pdf}" target="_blank">${notificacao.titulo}</a></strong><br>
         🗒️ ${notificacao.descricao || "Sem descrição"}
       </div>
     </div>
@@ -171,10 +161,12 @@
   e.preventDefault();
 
   const novaNotificacao = {
-    titulo: tituloEl.value.trim(),
-    descricao: descEl.value.trim(),
-    imagem: imagemEl.value.trim() || null
-  };
+  titulo: tituloEl.value.trim(),
+  descricao: descEl.value.trim(),
+  imagem: imagemEl.value.trim() || null,
+  pdf: pdfEl.value.trim() || null
+};
+
 
   const notificacoes = JSON.parse(localStorage.getItem("notificacoes")) || [];
   notificacoes.push(novaNotificacao);
@@ -192,13 +184,16 @@
   const novoTitulo = prompt("Editar título:", atual.titulo);
   const novaDescricao = prompt("Editar descrição:", atual.descricao);
   const novaImagem = prompt("Editar nome da imagem (ex: livro1.png):", atual.imagem || "");
+  const novoPDF = prompt("Editar nome do arquivo PDF (ex: 1984.pdf):", atual.pdf || "");
 
   if (novoTitulo !== null) {
     notificacoes[index] = {
-      titulo: novoTitulo.trim() || atual.titulo,
-      descricao: novaDescricao !== null ? novaDescricao.trim() : atual.descricao,
-      imagem: novaImagem !== null ? novaImagem.trim() : atual.imagem
-    };
+  titulo: novoTitulo.trim() || atual.titulo,
+  descricao: novaDescricao !== null ? novaDescricao.trim() : atual.descricao,
+  imagem: novaImagem !== null ? novaImagem.trim() : atual.imagem,
+  pdf: novoPDF !== null ? novoPDF.trim() : atual.pdf
+};
+
 
     localStorage.setItem("notificacoes", JSON.stringify(notificacoes));
     carregarNotificacoes();
