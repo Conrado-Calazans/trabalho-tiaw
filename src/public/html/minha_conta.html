@@ -29,210 +29,54 @@
       </div>            
     </div>
   </header>
+
     
+  <style>
+    :root {
+      --primary-color: #2C3E50;
+      --secondary-color: #3498db;
+      --success-color: #2ecc71;
+      --danger-color: #e74c3c;
+      --light-gray: #f4f4f9;
+      --dark-gray: #333;
+      --medium-gray: #666;
+    }
+    body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: var(--dark-gray); background-color: var(--light-gray); }
+    header { background: #f5f5f5; border-bottom: 1px solid #ccc; }
+    .top-bar { display: flex; justify-content: center; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 1.5rem; }
+    .logo img { height: 150px; width: auto; object-fit: contain; margin-right: 20px; }
+    .logo .textos h1 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 0.5rem; }
+    .logo .textos p { font-size: 1rem; color: var(--medium-gray); }
     
-    <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-color: #f4f4f9;
-    }
-
-    header {
-      background: #f5f5f5;
-      border-bottom: 1px solid #ccc;
-    }
-   
-
-    .top-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-left: 0;
-      padding: 10px 0;
-    }
-
-    .logo img {
-      height: 150px;
-      width: auto;
-      object-fit: contain;
-      margin-right: 20px;
-    }
-
-    .logo .textos {
-      flex: 1;
-      text-align: left;
-    }
-
-    .logo .textos h1 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 2.2rem;
-      color: #2C3E50;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      line-height: 1.2;
-    }
-
-    .logo .textos p {
-      font-size: 1rem;
-      color: #666;
-      line-height: 1.5;
-      margin-top: 0.25rem;
-    }
-    
-  
-
-
-    /* CSS para o conteúdo da página "Minha Conta" */
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-    
-
-    h2 {
-      font-size: 1.8rem;
-      color: #2C3E50;
-      margin-bottom: 25px;
-      border-bottom: 2px solid #f0f0f0;
-      padding-bottom: 10px;
-    }
-
-    .info-group {
-      margin-bottom: 20px;
-    }
-
-    .info-group label {
-      font-weight: bold;
-      color: #555;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .info-group p {
-      font-size: 1.1rem;
-      color: #333;
-      margin: 0;
-      padding: 12px;
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      font-size: 1rem;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      background-color: #3498db;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .btn:hover {
-      background-color: #2980b9;
-      transform: translateY(-2px);
-    }
-    
-    .btn:active {
-        transform: translateY(0);
-    }
-
-    .form-container {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 1rem;
-    }
-
-    .form-actions {
-      margin-top: 25px;
-      display: flex;
-      gap: 15px;
-    }
-
-    .btn-primary {
-      background-color: #2ecc71;
-    }
-    .btn-primary:hover {
-      background-color: #27ae60;
-    }
-
-    .btn-secondary {
-      background-color: #95a5a6;
-    }
-    .btn-secondary:hover {
-      background-color: #7f8c8d;
-    }
-    
-    .danger-zone {
-      margin-top: 50px;
-      padding: 20px;
-      border: 1px solid #e74c3c;
-      border-radius: 8px;
-      background-color: #fbecec;
-    }
-
-    .danger-zone h3 {
-      color: #c0392b;
-      margin-top: 0;
-      font-size: 1.4rem;
-    }
-    
-    .danger-zone p {
-        color: #5a2824;
-    }
-
-    .btn-danger {
-      background-color: #e74c3c;
-    }
-    .btn-danger:hover {
-      background-color: #c0392b;
-    }
+    .container { max-width: 800px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    h2 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+    h3 { font-size: 1.4rem; color: var(--primary-color); margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+    .info-group { margin-bottom: 20px; }
+    .info-group label { font-weight: bold; color: #555; display: block; margin-bottom: 5px; }
+    .info-group p { font-size: 1.1rem; color: var(--dark-gray); margin: 0; padding: 12px; background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 4px; }
+    .btn { display: inline-block; padding: 12px 22px; font-size: 1rem; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: var(--secondary-color); border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .form-container { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+    .form-group input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+    .form-actions { margin-top: 25px; display: flex; gap: 15px; }
+    .btn-primary { background-color: var(--success-color); } .btn-primary:hover { background-color: #27ae60; }
+    .btn-secondary { background-color: #95a5a6; } .btn-secondary:hover { background-color: #7f8c8d; }
+    .danger-zone { margin-top: 50px; padding: 20px; border: 1px solid var(--danger-color); border-radius: 8px; background-color: #fbecec; }
+    .danger-zone h3 { color: #c0392b; border: none; }
+    .danger-zone p { color: #5a2824; }
+    .btn-danger { background-color: var(--danger-color); } .btn-danger:hover { background-color: #c0392b; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+    .tag-list li { background-color: var(--secondary-color); color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; }
+    .book-list { list-style: none; padding: 0; }
+    .book-list li { display: flex; align-items: center; gap: 15px; padding: 10px; border-bottom: 1px solid #eee; }
+    .book-list img { width: 40px; height: 60px; object-fit: cover; border-radius: 4px; }
   </style>
 </head>
 <body>
- 
 
 
   <main class="container">
@@ -240,13 +84,22 @@
       <h2>Minhas Informações</h2>
       <div class="info-group">
         <label>Nome:</label>
-        <p id="user-name">Nome Fictício do Usuário</p>
+        <p id="user-name">Carregando...</p>
       </div>
       <div class="info-group">
         <label>Email:</label>
-        <p id="user-email">usuario@email.com.br</p>
+        <p id="user-email">Carregando...</p>
       </div>
       <button id="edit-button" class="btn">Editar Informações</button>
+
+      <h3>Minhas Preferências</h3>
+      <ul id="user-preferences" class="tag-list"><li>Carregando...</li></ul>
+      
+      <h3>Meu Histórico de Leitura</h3>
+      <ul id="user-history" class="book-list"><li>Carregando...</li></ul>
+
+      <h3>Meus Favoritos</h3>
+      <ul id="user-favorites" class="book-list"><li>Carregando...</li></ul>
     </div>
 
     <div id="edit-form-container" style="display: none;">
@@ -260,14 +113,6 @@
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
         </div>
-        <div class="form-group">
-          <label for="current-password">Senha Atual (para confirmar alterações):</label>
-          <input type="password" id="current-password" name="current-password" required>
-        </div>
-        <div class="form-group">
-          <label for="new-password">Nova Senha (deixe em branco para não alterar):</label>
-          <input type="password" id="new-password" name="new-password">
-        </div>
         <div class="form-actions">
           <button type="submit" class="btn btn-primary">Salvar Alterações</button>
           <button type="button" id="cancel-edit-button" class="btn btn-secondary">Cancelar</button>
@@ -277,78 +122,144 @@
 
     <div class="danger-zone">
       <h3>Zona de Perigo</h3>
-      <p>A exclusão da sua conta é uma ação permanente e todos os seus dados serão perdidos. Esta ação não poderá ser desfeita.</p>
+      <p>A exclusão da sua conta é uma ação permanente e todos os seus dados serão perdidos.</p>
       <button id="delete-account-button" class="btn btn-danger">Excluir Minha Conta</button>
     </div>
   </main>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Elementos da página
+      // --- CONFIGURAÇÃO ---
+      const BASE_URL = 'http://localhost:3000';
+      const USER_ID = "1"; // ID do usuário que estamos gerenciando. 
+
+      // --- ELEMENTOS DO DOM ---
       const accountDetails = document.getElementById('account-details');
       const editFormContainer = document.getElementById('edit-form-container');
       const editButton = document.getElementById('edit-button');
       const cancelEditButton = document.getElementById('cancel-edit-button');
       const deleteAccountButton = document.getElementById('delete-account-button');
       const editForm = document.getElementById('edit-form');
+      
+      // Displays
+      const userNameDisplay = document.getElementById('user-name');
+      const userEmailDisplay = document.getElementById('user-email');
+      const userPreferencesDisplay = document.getElementById('user-preferences');
+      const userHistoryDisplay = document.getElementById('user-history');
+      const userFavoritesDisplay = document.getElementById('user-favorites');
 
-      // Botão para MOSTRAR o formulário de edição
+      // Inputs do formulário
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+
+      // --- FUNÇÕES DE RENDERIZAÇÃO ---
+      const renderList = (element, items, emptyText) => {
+        element.innerHTML = '';
+        if (items && items.length > 0) {
+          items.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = item; // Simples para histórico e preferências
+            element.appendChild(li);
+          });
+        } else {
+          element.innerHTML = `<li>${emptyText}</li>`;
+        }
+      };
+      
+      const renderFavorites = (element, items) => {
+        element.innerHTML = '';
+        if (items && items.length > 0) {
+          items.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = `<img src="${item.poster || 'https://via.placeholder.com/40x60'}" alt="Poster"> ${item.titulo}`;
+            element.appendChild(li);
+          });
+        } else {
+          renderList(element, null, 'Nenhum livro favorito adicionado.');
+        }
+      };
+
+
+      // --- FUNÇÕES DE FETCH (BUSCA DE DADOS) ---
+
+      function fetchAllData() {
+        // 1. Buscar dados do usuário (nome, email)
+        fetch(`${BASE_URL}/usuarios/${USER_ID}`)
+          .then(response => response.json())
+          .then(user => {
+            userNameDisplay.textContent = user.nome;
+            userEmailDisplay.textContent = user.email;
+            nameInput.value = user.nome;
+            emailInput.value = user.email;
+          })
+          .catch(error => console.error('Erro ao buscar dados do usuário:', error));
+
+        // 2. Buscar dados de recomendações (preferências, histórico)
+        fetch(`${BASE_URL}/lerRecomendacoes`)
+          .then(response => response.json())
+          .then(data => {
+            renderList(userPreferencesDisplay, data.usuario.preferencias, 'Nenhuma preferência definida.');
+            const historicoTitulos = data.lerHistorico.map(livro => livro.titulo);
+            renderList(userHistoryDisplay, historicoTitulos, 'Nenhum livro no histórico.');
+          })
+          .catch(error => console.error('Erro ao buscar recomendações:', error));
+
+        // 3. Buscar favoritos do usuário
+        fetch(`${BASE_URL}/favoritos?usuarioId=${USER_ID}`)
+          .then(response => response.json())
+          .then(favoritos => {
+            renderFavorites(userFavoritesDisplay, favoritos);
+          })
+          .catch(error => console.error('Erro ao buscar favoritos:', error));
+      }
+
+      // --- LÓGICA DE EVENTOS ---
+      
+      fetchAllData(); // Carrega todos os dados quando a página é aberta
+
       editButton.addEventListener('click', () => {
-        // Esconde a visualização dos detalhes
         accountDetails.style.display = 'none';
-        // Mostra o container do formulário
         editFormContainer.style.display = 'block';
-
-        // Preenche o formulário com os dados atuais para facilitar a edição
-        // No mundo real, você pegaria esses dados de uma API/banco de dados
-        document.getElementById('name').value = document.getElementById('user-name').textContent;
-        document.getElementById('email').value = document.getElementById('user-email').textContent;
       });
 
-      // Botão para CANCELAR a edição e voltar à visualização
       cancelEditButton.addEventListener('click', () => {
-        // Mostra a visualização dos detalhes
         accountDetails.style.display = 'block';
-        // Esconde o container do formulário
         editFormContainer.style.display = 'none';
       });
 
-      // Lógica para SALVAR o formulário de edição
       editForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+        event.preventDefault();
+        const updatedData = { nome: nameInput.value, email: emailInput.value };
 
-        // Aqui você adicionaria a lógica para enviar os dados para o seu servidor (backend)
-        // Por exemplo, usando a API Fetch.
-
-        // Simulação de sucesso:
-        const newName = document.getElementById('name').value;
-        const newEmail = document.getElementById('email').value;
-        
-        // Atualiza os dados na tela (simulação)
-        document.getElementById('user-name').textContent = newName;
-        document.getElementById('user-email').textContent = newEmail;
-        
-        alert('Dados atualizados com sucesso!');
-
-        // Volta para a tela de visualização
-        accountDetails.style.display = 'block';
-        editFormContainer.style.display = 'none';
+        fetch(`${BASE_URL}/usuarios/${USER_ID}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updatedData),
+        })
+        .then(() => {
+          alert('Dados atualizados com sucesso!');
+          fetchAllData(); // Re-busca todos os dados para atualizar a tela
+          accountDetails.style.display = 'block';
+          editFormContainer.style.display = 'none';
+        })
+        .catch(error => console.error('Erro ao atualizar usuário:', error));
       });
 
-      // Lógica para o botão de EXCLUIR conta
       deleteAccountButton.addEventListener('click', function() {
-        const isConfirmed = confirm('VOCÊ TEM CERTEZA?\n\nAo excluir sua conta, todos os seus dados serão perdidos permanentemente. Esta ação não pode ser desfeita.\n\nClique em "OK" para confirmar a exclusão.');
-
-        if (isConfirmed) {
-          // Aqui você chamaria a lógica de backend para excluir a conta
-          
-          alert('Conta excluída com sucesso.');
-          // Idealmente, você redirecionaria o usuário para a página inicial ou de logout.
-          // window.location.href = '/'; 
+        if (confirm('Você tem CERTEZA que deseja excluir sua conta? Esta ação é irreversível.')) {
+          fetch(`${BASE_URL}/usuarios/${USER_ID}`, { method: 'DELETE' })
+            .then(response => {
+              if (response.ok) {
+                alert('Conta excluída com sucesso.');
+                document.body.innerHTML = '<h1>Conta excluída.</h1>';
+              } else {
+                alert('Ocorreu um erro ao excluir a conta.');
+              }
+            })
+            .catch(error => console.error('Erro ao excluir usuário:', error));
         }
       });
     });
   </script>
-
 </body>
 </html>
