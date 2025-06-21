@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buscar livros - Capítulo Aberto</title>
-  <link rel="stylesheet" href="/src/public/css/estilo-livros.css"/>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar livros - Capítulo Aberto</title>
+  <link rel="stylesheet" href="/src/public/css/estilo-livros.css"/>  
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <div class="logo">
-        <img src="/src/public/images/CA_logo.png" alt="Capítulo Aberto" />
-        <div class="textos">
-          <h1>Biblioteca online gratuita</h1>
-          <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
-        </div>
-      </div>
-    </div>
-  </header>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="/src/public/images/CA_logo.png" alt="Capítulo Aberto" />
+        <div class="textos">
+          <h1>Biblioteca online gratuita</h1>
+          <p>Explore um mundo de livros!</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Digite o título de um livro, autor...">
-            <button id="searchButton">Buscar</button>
-        </div>
+  <main>
+    <a href="catalogo.html" class="btn-voltar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path>
+      </svg>
+      Voltar ao Catálogo
+    </a>
+        <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Digite o título de um livro, autor...">
+        <button id="searchButton">Buscar</button>
+    </div>
 
-        <div id="results-container">
-            </div>
-    </main>
+    <div id="results-container">
+    </div>
+  </main>
 
-    <script src="../scripts/api-livros.js"></script>
+  <script src="../scripts/api-livros.js"></script>
 </body>
 </html>

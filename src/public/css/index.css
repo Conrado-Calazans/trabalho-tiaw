@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+}
+
+.top-bar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.top-bar .logo img {
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.textos h1 {
+    font-size: 28px;
+    margin: 10px 0 5px;
+}
+
+.textos p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.explorar-btn {
+    background-color: #ffffff;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explorar-btn:hover {
+    background-color: #e8f5e9;
+}
+
+.secondary-header {
+    background-color: #388E3C;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu a,
+.menu button {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu button:hover,
+.menu a:hover {
+    background-color: #2E7D32;
+    border-radius: 5px;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.destaques {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.destaques h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.admin-controls {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Modal geral */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.ver-tudo {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.ver-tudo:hover {
+    text-decoration: underline;
+}
+
+#bookForm input,
+#bookForm textarea,
+#bookForm button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#saveBookBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#saveBookBtn:hover {
+    background-color: #45a049;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    .top-bar .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-bar .logo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu a,
+    .menu button {
+        display: block;
+        margin: 5px 0;
+    }
+}

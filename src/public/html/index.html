@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capítulo Aberto - CRUD</title>
+    <title>Capítulo Aberto</title>
     <link rel="stylesheet" href="/src/public/css/style.css">
-    
 </head>
 <body>
     <header>
@@ -20,19 +19,23 @@
             </div>
         </div>
     </header>
+
     <header class="secondary-header">
         <div class="menu">
             <a href="favoritos.html">Meus favoritos</a>
-            <a href="catalogo.html">Catalogo de livros</a>
+            <a href="catalogo.html">Catálogo de livros</a>
             <button id="authButton">Entrar/Cadastrar</button>
             <button id="notificacoesBtn">Notificações</button>
         </div>
     </header>
+
     <section class="hero">
         <img src="/src/public/images/CA_notebook_readref.png" alt="Livros em um notebook" />
     </section>
+
     <section class="categorias">
-        </section>
+        <!-- Conteúdo dinâmico das categorias -->
+    </section>
 
     <section class="destaques">
         <h2>Em Destaque</h2>
@@ -40,28 +43,30 @@
             <button id="addBookBtn" class="explorar-btn">Adicionar Novo Livro</button>
         </div>
         <div class="cards" id="cardsContainer">
-            </div>
+            <!-- Cards de livros serão carregados aqui -->
+        </div>
     </section>
 
     <footer>
-        </footer>
+        &copy; 2025 Capítulo Aberto. Todos os direitos reservados.
+    </footer>
 
-<!-- Modal de Notificações -->
-  <div id="notificacoesModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="fecharNotificacoes">&times;</span>
-      <h3>Notificações</h3>
-      <ul class="listaNotificacoes">
-      <li>📢 Novo livro adicionado: <strong>"1984" </strong> do autor George Orwell</li>
-      <li>📌 Atualização no livro <strong>"Memórias Póstumas de Brás Cubas"</strong> disponível</li>
-      <li>📚 Sugestões baseadas em seus favoritos foram adicionadas</li>
-      <li>🚀 Novas categorias: <strong>Biografias</strong> e <strong>Autoajuda</strong></li>
-    </ul>
-      <a href="notificacoes.html" class="ver-tudo">Ver todas as mensagens</a>
+    <!-- Modal de Notificações -->
+    <div id="notificacoesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="fecharNotificacoes">&times;</span>
+            <h3>Notificações</h3>
+            <ul class="listaNotificacoes">
+                <li>📢 Novo livro adicionado: <strong>"1984"</strong> do autor George Orwell</li>
+                <li>📌 Atualização no livro <strong>"Memórias Póstumas de Brás Cubas"</strong> disponível</li>
+                <li>📚 Sugestões baseadas em seus favoritos foram adicionadas</li>
+                <li>🚀 Novas categorias: <strong>Biografias</strong> e <strong>Autoajuda</strong></li>
+            </ul>
+            <a href="notificacoes.html" class="ver-tudo">Ver todas as mensagens</a>
+        </div>
     </div>
-  </div>
 
-
+    <!-- Modal de Adicionar Livro -->
     <div id="bookModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeBookModal">&times;</span>
@@ -70,12 +75,16 @@
                 <input type="hidden" id="bookId">
                 <label for="bookTitle">Título:</label>
                 <input type="text" id="bookTitle" placeholder="Título do livro" required>
+
                 <label for="bookDescription">Descrição:</label>
                 <textarea id="bookDescription" placeholder="Descrição do livro" rows="4" required></textarea>
+
                 <label for="bookImage">URL da Imagem:</label>
                 <input type="text" id="bookImage" placeholder="Ex: /src/public/images/imagem.jpg" required>
+
                 <label for="bookPdf">URL do PDF:</label>
                 <input type="text" id="bookPdf" placeholder="Ex: /src/public/pdfs/livro.pdf" required>
+
                 <button type="submit" id="saveBookBtn">Salvar</button>
             </form>
         </div>

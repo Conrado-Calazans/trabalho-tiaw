@@ -169,3 +169,123 @@ header {
     align-items: stretch;
   }
 }
+
+/* Importação de uma fonte (opcional, mas recomendado para um visual melhor) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilos gerais para o corpo da página */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f6; /* Um cinza claro para o fundo */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container principal que centraliza o formulário na tela */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Altura mínima para ocupar boa parte da tela */
+  padding: 2rem 1rem; /* Espaçamento para telas menores */
+}
+
+/* O card/caixa que envolve o formulário de cadastro */
+.container-cadastro {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Largura máxima do formulário */
+  box-sizing: border-box;
+}
+
+/* Título "Cadastro" */
+.container-cadastro h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Agrupamento de cada label e input */
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Estilo para as etiquetas (Nome, E-mail, etc.) */
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para os campos de texto, e-mail e senha */
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Garante que padding não afete a largura total */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito visual quando o usuário clica no campo de input */
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db; /* Cor de destaque */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Botão de Cadastrar */
+.btn-cadastro {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #3498db; /* Azul primário */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btn-cadastro:hover {
+  background-color: #2980b9; /* Tom de azul mais escuro */
+}
+
+/* Mensagem de erro (ex: "As senhas não coincidem") */
+#mensagem {
+  text-align: center;
+  color: #e74c3c; /* Vermelho para indicar erro */
+  margin-top: 1rem;
+  font-weight: 500;
+  min-height: 20px; /* Evita que o layout "pule" quando a mensagem aparece */
+}
+
+/* Estilo para o link "Já tem conta? Faça login aqui" */
+.link-login {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #555;
+}
+
+.link-login a {
+  color: #3498db; /* Mesma cor do botão para consistência */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-login a:hover {
+  text-decoration: underline;
+}

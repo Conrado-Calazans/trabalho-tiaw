@@ -1,133 +1,186 @@
-/* Estilos gerais */
+/* A regra @import deve ser a primeira linha do arquivo para funcionar corretamente. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* --- ESTILOS GERAIS E CABEÇALHO --- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #1c1e21;
-    margin: 0;
-    line-height: 1.6;
+  /* Combina as fontes, priorizando a 'Roboto' e usando as outras como alternativas */
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5; /* Fundo cinza claro e neutro */
+  color: #1c1e21;           /* Cor de texto escura para boa legibilidade */
+  margin: 0;
+  line-height: 1.6;        /* Espaçamento entre linhas para melhor leitura */
 }
 
 header {
-    background-color: #ffffff;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
 }
 
 main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
-/* Container da busca */
+/* --- BARRA DE BUSCA (Estilo "Pílula") --- */
 .search-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 2rem;
+  display: flex;
+  max-width: 700px;
+  margin: 0 auto 3rem auto; /* Centraliza e adiciona margem inferior */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 50px; /* Bordas arredondadas para o visual moderno */
 }
 
 #searchInput {
-    width: 100%;
-    max-width: 500px;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccd0d5;
-    border-radius: 6px;
+  flex-grow: 1; /* Ocupa o máximo de espaço */
+  border: 2px solid transparent; /* Borda transparente para não "pular" no focus */
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#searchInput::placeholder {
+  color: #a4b0be;
+}
+
+#searchInput:focus {
+  border-color: #1877f2; /* Cor de destaque ao focar */
 }
 
 #searchButton {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #1877f2;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1877f2; /* Azul estilo "Facebook" */
+  border: none;
+  cursor: pointer;
+  border-radius: 0 50px 50px 0;
+  transition: background-color 0.3s;
 }
 
 #searchButton:hover {
-    background-color: #166fe5;
+  background-color: #166fe5; /* Tom mais escuro no hover */
 }
 
-/* Container e cards de resultados */
+/* --- BOTÃO DE NAVEGAÇÃO / VOLTAR (NOVA SEÇÃO ADICIONADA) --- */
+.btn-voltar {
+  display: inline-flex; /* Permite alinhar o ícone e o texto facilmente */
+  align-items: center;  /* Centraliza o ícone e o texto verticalmente */
+  gap: 0.5rem;          /* Espaço entre o ícone e o texto */
+  
+  background-color: #ffffff;
+  color: #606770; /* Um cinza escuro para o texto */
+  border: 1px solid #ccd0d5; /* Borda sutil */
+  
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 2rem; /* Espaço abaixo do botão, antes da busca */
+  
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: #e9ecef; /* Um fundo levemente acinzentado */
+  border-color: #adb5bd;     /* Borda um pouco mais escura */
+  color: #1c1e21;            /* Texto mais escuro para destaque */
+}
+
+.btn-voltar svg {
+  width: 1em;  /* Tamanho do ícone relativo ao tamanho da fonte */
+  height: 1em;
+  fill: currentColor; /* Faz o ícone ter a mesma cor do texto */
+}
+
+/* --- CONTAINER E CARDS DE RESULTADOS --- */
 #results-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  /* Grade responsiva com colunas de no mínimo 280px */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .book-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .book-card img {
-    width: 100%;
-    height: 200px; /* Altura fixa para a área da imagem */
-    object-fit: contain; /* Ajusta a imagem sem distorcer */
-    background-color: #f0f2f5;
-    padding-top: 10px;
+  width: 100%;
+  height: 250px; /* Altura da imagem */
+  object-fit: cover; /* Cobre o espaço sem distorcer (melhor que 'contain' para UI) */
+  background-color: #f0f2f5;
 }
 
 .book-info {
-    padding: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  padding: 1rem;
+  flex-grow: 1; /* Garante que todos os cards tenham a mesma altura */
+  display: flex;
+  flex-direction: column;
 }
 
 .book-info h3 {
-    font-size: 1.2rem;
-    margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .book-info .author {
-    font-size: 0.9rem;
-    color: #606770;
-    margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #606770;
+  margin-bottom: 1rem;
 }
 
 .book-info .description {
-    font-size: 0.95rem;
-    flex-grow: 1;
+  font-size: 0.95rem;
+  flex-grow: 1; /* Empurra o botão para o final do card */
 }
 
 .buy-link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    color: #1877f2;
-    border: 1px solid #1877f2;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  align-self: flex-start; /* Alinha o botão à esquerda */
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: #1877f2;
+  border: 1px solid #1877f2;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .buy-link:hover {
-    background-color: #1877f2;
-    color: #fff;
+  background-color: #1877f2;
+  color: #fff;
 }
 
-/* Mensagens de status */
+/* --- MENSAGENS DE STATUS (CARREGANDO, ERRO) --- */
 .loading, .error {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #606770;
-    padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #606770;
+  padding: 2rem;
+  /* Ocupa toda a largura da grade se for o único elemento */
+  grid-column: 1 / -1; 
 }
