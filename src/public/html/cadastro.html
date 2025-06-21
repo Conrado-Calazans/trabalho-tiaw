@@ -2,151 +2,21 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cadastro - CAPÍTULO ABERTO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    header {
-      background-color: #00aaff;
-      padding: 15px 30px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      height: 40px;
-    }
-
-    .logo-text {
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .search-bar {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .search-bar input {
-      padding: 6px 10px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    .container-cadastro {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 40px;
-      border: 2px solid cornflowerblue;
-      border-radius: 10px;
-      background-color: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .container-cadastro h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    .btn-cadastro {
-      width: 100%;
-      padding: 12px;
-      background-color: cornflowerblue;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .btn-cadastro:hover {
-      background-color: darkblue;
-    }
-
-    .link-login {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .link-login a {
-      color: cornflowerblue;
-      text-decoration: none;
-    }
-
-    .link-login a:hover {
-      text-decoration: underline;
-    }
-
-    #mensagem {
-      margin-top: 10px;
-      text-align: center;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar livros - Capítulo Aberto</title>
+  <link rel="stylesheet" href="/src/public/css/cadastro.css"/>  
 </head>
 <body>
-
   <header>
-    <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Logo" />
-      <div class="logo-text">CAPÍTULO ABERTO</div>
-    </div>
-    <nav>
-      <a href="#">Categorias</a>
-      <a href="#">Principais Autores</a>
-      <a href="#">Livros Favoritos</a>
-      <a href="#">Minha Conta</a>
-    </nav>
-    <div class="search-bar">
-      <input type="text" placeholder="Pesquisar livros..."/>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="/src/public/images/CA_logo.png" alt="Capítulo Aberto" />
+        <div class="textos">
+          <h1>Biblioteca online gratuita</h1>
+          <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
+          <button class="explorar-btn" id="explorarBtn">Explorar</button>
+        </div>
+      </div>
     </div>
   </header>
 

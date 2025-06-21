@@ -1,0 +1,133 @@
+/* Estilos gerais */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Container da busca */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+}
+
+#searchButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #166fe5;
+}
+
+/* Container e cards de resultados */
+#results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px; /* Altura fixa para a área da imagem */
+    object-fit: contain; /* Ajusta a imagem sem distorcer */
+    background-color: #f0f2f5;
+    padding-top: 10px;
+}
+
+.book-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.book-info .author {
+    font-size: 0.9rem;
+    color: #606770;
+    margin-bottom: 1rem;
+}
+
+.book-info .description {
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.buy-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: #1877f2;
+    border: 1px solid #1877f2;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buy-link:hover {
+    background-color: #1877f2;
+    color: #fff;
+}
+
+/* Mensagens de status */
+.loading, .error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #606770;
+    padding: 2rem;
+}
