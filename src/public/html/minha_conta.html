@@ -169,6 +169,81 @@
       background-color: var(--danger-color);
       color: white;
     }
+    /* --- ADICIONE ESTES NOVOS ESTILOS AO SEU CSS --- */
+
+/* Estilo para a seção da biografia */
+.bio-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.bio-section h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.bio-section p {
+  line-height: 1.6;
+  color: #6c757d; /* Um cinza um pouco mais suave */
+}
+
+/* Estilo para as tags de gênero */
+.genres-section {
+  margin-top: 20px;
+}
+
+.genres-section h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.genre-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Espaçamento entre as tags */
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+/* Estilo para o campo de texto da biografia no formulário */
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; /* Manter a mesma fonte */
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    min-height: 100px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Texto de ajuda para o campo de gêneros */
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
   </style>
 
   <script src="/src/public/scripts/verificar-login.js"></script>
@@ -207,6 +282,22 @@
         <label>Email:</label>
         <p id="user-email">Carregando...</p>
       </div>
+
+      <div class="bio-section">
+        <h4>Minha Biografia</h4>
+        <p id="user-bio">Adicione uma breve biografia para que outros leitores possam te conhecer...</p>
+      </div>
+      
+
+      <div class="genres-section">
+        <h4>Gêneros Favoritos</h4>
+        <p id="user-bio">Informe aqui seus gêneros favoritos...</p>
+
+        <div id="user-genres" class="genre-tags">
+        
+        </div>
+      </div>
+      
       <button id="edit-button" class="btn btn-primary">Editar Informações</button>
     </div>
 
@@ -221,6 +312,18 @@
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
         </div>
+        
+        <div class="form-group">
+          <label for="bio">Minha Biografia:</label>
+          <textarea id="bio" name="bio" placeholder="Fale um pouco sobre você e seus hábitos de leitura..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="genres">Gêneros de Interesse:</label>
+          <input type="text" id="genres" name="genres" placeholder="Ex: Ficção, Suspense, Romance">
+          <small>Separe os gêneros por vírgula.</small>
+        </div>
+
         <div class="form-actions">
           <button type="submit" class="btn btn-primary">Salvar Alterações</button>
           <button type="button" id="cancel-edit-button" class="btn btn-secondary">Cancelar</button>
