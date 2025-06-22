@@ -153,6 +153,13 @@
       "email": "caco@gmail.com",
       "senha": "123456",
       "admin": false
+    },
+    {
+      "id": "4d97",
+      "nome": "teste",
+      "email": "teste123@gmail.com",
+      "senha": "123456",
+      "admin": false
     }
   ]
 }
