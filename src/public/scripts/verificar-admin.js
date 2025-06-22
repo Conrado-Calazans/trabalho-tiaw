@@ -22,5 +22,6 @@
 
     // Se o script chegou até aqui, o usuário é um admin. A página pode carregar.
     console.log('Acesso de administrador concedido.');
+    window.location.href = 'index.html';
 
 })();

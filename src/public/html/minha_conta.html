@@ -3,64 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha conta</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/public/css/style.css">
-  <title>Minha conta</title>
-  
   <style>
+    /* Seu CSS pode continuar aqui ou ser movido para um arquivo .css */
     :root {
       --primary-color: #2C3E50;
       --secondary-color: #3498db;
       --success-color: #2ecc71;
       --danger-color: #e74c3c;
-      --light-gray: #f4f4f9;
-      --dark-gray: #333;
-      --medium-gray: #666;
     }
-    body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: var(--dark-gray); background-color: var(--light-gray); }
-    header { background: #f5f5f5; border-bottom: 1px solid #ccc; }
-    .top-bar { display: flex; justify-content: center; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
-    .logo { display: flex; align-items: center; gap: 1.5rem; }
-    .logo img { height: 150px; width: auto; object-fit: contain; margin-right: 20px; }
-    .logo .textos h1 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 0.5rem; }
-    .logo .textos p { font-size: 1rem; color: var(--medium-gray); }
-    
-    /* Adicionado estilo para o botão de sair */
-    .secondary-header .menu a.logout-button {
-        background-color: #c0392b;
-    }
-    .secondary-header .menu a.logout-button:hover {
-        background-color: var(--danger-color);
-    }
-    
-    .container { max-width: 800px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-    h2 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
-    h3 { font-size: 1.4rem; color: var(--primary-color); margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-    .info-group { margin-bottom: 20px; }
-    .info-group label { font-weight: bold; color: #555; display: block; margin-bottom: 5px; }
-    .info-group p { font-size: 1.1rem; color: var(--dark-gray); margin: 0; padding: 12px; background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 4px; }
-    .btn { display: inline-block; padding: 12px 22px; font-size: 1rem; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: var(--secondary-color); border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
-    .btn:hover { transform: translateY(-2px); }
-    .btn:active { transform: translateY(0); }
-    .form-container { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
-    .form-group input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
-    .form-actions { margin-top: 25px; display: flex; gap: 15px; }
-    .btn-primary { background-color: var(--success-color); } .btn-primary:hover { background-color: #27ae60; }
-    .btn-secondary { background-color: #95a5a6; } .btn-secondary:hover { background-color: #7f8c8d; }
-    .danger-zone { margin-top: 50px; padding: 20px; border: 1px solid var(--danger-color); border-radius: 8px; background-color: #fbecec; }
-    .danger-zone h3 { color: #c0392b; border: none; }
-    .danger-zone p { color: #5a2824; }
-    .btn-danger { background-color: var(--danger-color); } .btn-danger:hover { background-color: #c0392b; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
-    .tag-list li { background-color: var(--secondary-color); color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; }
-    .book-list { list-style: none; padding: 0; }
-    .book-list li { display: flex; align-items: center; gap: 15px; padding: 10px; border-bottom: 1px solid #eee; }
-    .book-list img { width: 40px; height: 60px; object-fit: cover; border-radius: 4px; }
+    body { font-family: 'Open Sans', sans-serif; }
+    /* ... (resto do seu style) ... */
+    .secondary-header .menu a.logout-button { background-color: #c0392b; }
+    .secondary-header .menu a.logout-button:hover { background-color: var(--danger-color); }
+    .container { max-width: 800px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 8px; }
   </style>
+
+  <script src="/src/public/scripts/verificar-login.js"></script>
+
 </head>
 <body>
   <header>
@@ -76,7 +41,7 @@
   </header>
 
   <header class="secondary-header">
-    <div class="menu">  
+    <div class="menu">
       <a href="minha_conta.html">Minha Conta</a>
       <a href="index.html">Voltar à página inicial</a>
       <a href="#" id="logout-button" class="logout-button">Sair</a>
@@ -96,15 +61,7 @@
       </div>
       <button id="edit-button" class="btn">Editar Informações</button>
 
-      <h3>Minhas Preferências</h3>
-      <ul id="user-preferences" class="tag-list"><li>Carregando...</li></ul>
-      
-      <h3>Meu Histórico de Leitura</h3>
-      <ul id="user-history" class="book-list"><li>Carregando...</li></ul>
-
-      <h3>Meus Favoritos</h3>
-      <ul id="user-favorites" class="book-list"><li>Carregando...</li></ul>
-    </div>
+      </div>
 
     <div id="edit-form-container" style="display: none;">
       <h2>Editar Minha Conta</h2>
@@ -131,162 +88,8 @@
     </div>
   </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // --- MUDANÇA 1: O GUARDIÃO DA PÁGINA ---
-      // Pega o ID do usuário do localStorage.
-      const LOGGED_USER_ID = localStorage.getItem('loggedUserId');
-
-      // Se não houver ID, o usuário não está logado. Redireciona para o login.
-      if (!LOGGED_USER_ID) {
-        alert('Acesso negado. Por favor, faça o login para continuar.');
-        window.location.href = 'login.html'; // Altere para o nome da sua página de login
-        return; // Para a execução do script para que nada abaixo seja carregado
-      }
-      
-      // Se o script chegou aqui, o usuário está autenticado.
-
-      // --- CONFIGURAÇÃO ---
-      const BASE_URL = 'http://localhost:3000';
-      
-      // --- ELEMENTOS DO DOM ---
-      const accountDetails = document.getElementById('account-details');
-      const editFormContainer = document.getElementById('edit-form-container');
-      const editButton = document.getElementById('edit-button');
-      const cancelEditButton = document.getElementById('cancel-edit-button');
-      const deleteAccountButton = document.getElementById('delete-account-button');
-      const editForm = document.getElementById('edit-form');
-      
-      const userNameDisplay = document.getElementById('user-name');
-      const userEmailDisplay = document.getElementById('user-email');
-      const userPreferencesDisplay = document.getElementById('user-preferences');
-      const userHistoryDisplay = document.getElementById('user-history');
-      const userFavoritesDisplay = document.getElementById('user-favorites');
-
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-
-      // --- FUNÇÕES DE RENDERIZAÇÃO (sem alterações) ---
-      const renderList = (element, items, emptyText) => {
-        element.innerHTML = '';
-        if (items && items.length > 0) {
-          items.forEach(item => {
-            const li = document.createElement('li');
-            li.innerHTML = item;
-            element.appendChild(li);
-          });
-        } else {
-          element.innerHTML = `<li>${emptyText}</li>`;
-        }
-      };
-      
-      const renderFavorites = (element, items) => {
-        element.innerHTML = '';
-        if (items && items.length > 0) {
-          items.forEach(item => {
-            const li = document.createElement('li');
-            li.innerHTML = `<img src="${item.poster || 'https://via.placeholder.com/40x60'}" alt="Poster"> ${item.titulo}`;
-            element.appendChild(li);
-          });
-        } else {
-          renderList(element, null, 'Nenhum livro favorito adicionado.');
-        }
-      };
-
-      // --- MUDANÇA 2: DADOS DINÂMICOS ---
-      // A função agora usa LOGGED_USER_ID para buscar os dados corretos.
-      function fetchAllData() {
-        // 1. Buscar dados do usuário (nome, email)
-        fetch(`${BASE_URL}/usuarios/${LOGGED_USER_ID}`)
-          .then(response => response.json())
-          .then(user => {
-            userNameDisplay.textContent = user.nome;
-            userEmailDisplay.textContent = user.email;
-            nameInput.value = user.nome;
-            emailInput.value = user.email;
-          })
-          .catch(error => console.error('Erro ao buscar dados do usuário:', error));
-
-        // 2. Buscar dados de recomendações (preferências, histórico)
-        fetch(`${BASE_URL}/lerRecomendacoes`)
-          .then(response => response.json())
-          .then(data => {
-            renderList(userPreferencesDisplay, data.usuario.preferencias, 'Nenhuma preferência definida.');
-            const historicoTitulos = data.lerHistorico.map(livro => livro.titulo);
-            renderList(userHistoryDisplay, historicoTitulos, 'Nenhum livro no histórico.');
-          })
-          .catch(error => console.error('Erro ao buscar recomendações:', error));
-
-        // 3. Buscar favoritos do usuário
-        fetch(`${BASE_URL}/favoritos?usuarioId=${LOGGED_USER_ID}`)
-          .then(response => response.json())
-          .then(favoritos => {
-            renderFavorites(userFavoritesDisplay, favoritos);
-          })
-          .catch(error => console.error('Erro ao buscar favoritos:', error));
-      }
-
-      // --- LÓGICA DE EVENTOS ---
-      
-      fetchAllData(); // Carrega os dados do usuário LOGADO
-
-      editButton.addEventListener('click', () => {
-        accountDetails.style.display = 'none';
-        editFormContainer.style.display = 'block';
-      });
-
-      cancelEditButton.addEventListener('click', () => {
-        accountDetails.style.display = 'block';
-        editFormContainer.style.display = 'none';
-      });
-
-      editForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const updatedData = { nome: nameInput.value, email: emailInput.value };
-
-        fetch(`${BASE_URL}/usuarios/${LOGGED_USER_ID}`, { // <-- Usa o ID do usuário logado
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(updatedData),
-        })
-        .then(() => {
-          alert('Dados atualizados com sucesso!');
-          fetchAllData();
-          accountDetails.style.display = 'block';
-          editFormContainer.style.display = 'none';
-        })
-        .catch(error => console.error('Erro ao atualizar usuário:', error));
-      });
-
-      deleteAccountButton.addEventListener('click', function() {
-        if (confirm('Você tem CERTEZA que deseja excluir sua conta? Esta ação é irreversível.')) {
-          fetch(`${BASE_URL}/usuarios/${LOGGED_USER_ID}`, { method: 'DELETE' }) // <-- Usa o ID do usuário logado
-            .then(response => {
-              if (response.ok) {
-                // MUDANÇA: Limpa o localStorage antes de avisar e redirecionar
-                localStorage.removeItem('loggedUserId');
-                alert('Conta excluída com sucesso.');
-                window.location.href = 'index.html'; // Redireciona para a home
-              } else {
-                alert('Ocorreu um erro ao excluir a conta.');
-              }
-            })
-            .catch(error => console.error('Erro ao excluir usuário:', error));
-        }
-      });
-      
-      // --- MUDANÇA 3: FUNCIONALIDADE DE LOGOUT ---
-      const logoutButton = document.getElementById('logout-button');
-      logoutButton.addEventListener('click', (event) => {
-          event.preventDefault(); // Previne que o link '#' mude a URL
-          
-          localStorage.removeItem('loggedUserId'); // Limpa o ID do usuário
-          alert('Você saiu da sua conta.');
-          window.location.href = 'index.html'; // Redireciona para a página de login
-      });
-    });
-  </script>
   <script src="/src/public/scripts/auth.js"></script>
+  <script src="/src/public/scripts/minha-conta.js"></script>
 
 </body>
 </html>
