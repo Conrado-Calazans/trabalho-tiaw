@@ -1,171 +1,265 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<body>
-  <header>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/public/css/style.css">
+  <title>Minha conta</title>
+</head>
+
+<header>
     <div class="top-bar">
       <div class="logo">
         <img src="/src/public/images/CA_logo.png" alt="Capítulo Aberto" />
         <div class="textos">
           <h1>Biblioteca online gratuita</h1>
           <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
-          <button class="explorar-btn" id="explorarBtn">Explorar</button>
         </div>
       </div>
     </div>
   </header>
- <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
 
-    header {
-      background-color: #00aaff;
-      padding: 15px 30px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+  <header class="secondary-header">
+    <div class="menu">  
+      <a href="minha_conta.html">Minha Conta</a>
+      <a href="index.html">Voltar à página inicial</a>
+      </div>            
+    </div>
+  </header>
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    
+  <style>
+    :root {
+      --primary-color: #2C3E50;
+      --secondary-color: #3498db;
+      --success-color: #2ecc71;
+      --danger-color: #e74c3c;
+      --light-gray: #f4f4f9;
+      --dark-gray: #333;
+      --medium-gray: #666;
     }
-
-    .logo img {
-      height: 40px;
-    }
-
-    .logo-text {
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .search-bar {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .search-bar input {
-      padding: 6px 10px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    main {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
-      border: 2px solid cornflowerblue;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    .user-info {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    .logout-btn {
-      margin-top: 30px;
-      width: 100%;
-      padding: 12px;
-      background-color: #d9534f;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .logout-btn:hover {
-      background-color: #c9302c;
-    }
+    body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: var(--dark-gray); background-color: var(--light-gray); }
+    header { background: #f5f5f5; border-bottom: 1px solid #ccc; }
+    .top-bar { display: flex; justify-content: center; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 1.5rem; }
+    .logo img { height: 150px; width: auto; object-fit: contain; margin-right: 20px; }
+    .logo .textos h1 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 0.5rem; }
+    .logo .textos p { font-size: 1rem; color: var(--medium-gray); }
+    
+    .container { max-width: 800px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    h2 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+    h3 { font-size: 1.4rem; color: var(--primary-color); margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+    .info-group { margin-bottom: 20px; }
+    .info-group label { font-weight: bold; color: #555; display: block; margin-bottom: 5px; }
+    .info-group p { font-size: 1.1rem; color: var(--dark-gray); margin: 0; padding: 12px; background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 4px; }
+    .btn { display: inline-block; padding: 12px 22px; font-size: 1rem; font-weight: bold; text-align: center; text-decoration: none; color: #fff; background-color: var(--secondary-color); border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .form-container { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+    .form-group input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+    .form-actions { margin-top: 25px; display: flex; gap: 15px; }
+    .btn-primary { background-color: var(--success-color); } .btn-primary:hover { background-color: #27ae60; }
+    .btn-secondary { background-color: #95a5a6; } .btn-secondary:hover { background-color: #7f8c8d; }
+    .danger-zone { margin-top: 50px; padding: 20px; border: 1px solid var(--danger-color); border-radius: 8px; background-color: #fbecec; }
+    .danger-zone h3 { color: #c0392b; border: none; }
+    .danger-zone p { color: #5a2824; }
+    .btn-danger { background-color: var(--danger-color); } .btn-danger:hover { background-color: #c0392b; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+    .tag-list li { background-color: var(--secondary-color); color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; }
+    .book-list { list-style: none; padding: 0; }
+    .book-list li { display: flex; align-items: center; gap: 15px; padding: 10px; border-bottom: 1px solid #eee; }
+    .book-list img { width: 40px; height: 60px; object-fit: cover; border-radius: 4px; }
   </style>
 </head>
 <body>
 
-  <header>
-      <nav>
-    <a href="#" id="link-favoritos">Livros Favoritos</a>
-    <a href="catalogo.html">Catalogo</a>
-    <a href="admin.html">Adicionar Livro</a>
-    <a href="minha_conta.html">Minha Conta</a>
-    <a href="index.html">Sair</a>
-    <span class="search">
-      <input type="text" placeholder="Pesquisar livros...">
-      <button>🔍</button>
-    </span>
-  </nav>
-    <div class="search-bar">
-      <input type="text" placeholder="Pesquisar livros..."/>
-    </div>
-  </header>
 
-  <main>
-    <h2>Minha Conta</h2>
-    <div class="user-info" id="user-info">
-      Carregando informações...
+  <main class="container">
+    <div id="account-details">
+      <h2>Minhas Informações</h2>
+      <div class="info-group">
+        <label>Nome:</label>
+        <p id="user-name">Carregando...</p>
+      </div>
+      <div class="info-group">
+        <label>Email:</label>
+        <p id="user-email">Carregando...</p>
+      </div>
+      <button id="edit-button" class="btn">Editar Informações</button>
+
+      <h3>Minhas Preferências</h3>
+      <ul id="user-preferences" class="tag-list"><li>Carregando...</li></ul>
+      
+      <h3>Meu Histórico de Leitura</h3>
+      <ul id="user-history" class="book-list"><li>Carregando...</li></ul>
+
+      <h3>Meus Favoritos</h3>
+      <ul id="user-favorites" class="book-list"><li>Carregando...</li></ul>
     </div>
-    <button class="logout-btn" onclick="logout()">Sair</button>
+
+    <div id="edit-form-container" style="display: none;">
+      <h2>Editar Minha Conta</h2>
+      <form id="edit-form">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+          <button type="button" id="cancel-edit-button" class="btn btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="danger-zone">
+      <h3>Zona de Perigo</h3>
+      <p>A exclusão da sua conta é uma ação permanente e todos os seus dados serão perdidos.</p>
+      <button id="delete-account-button" class="btn btn-danger">Excluir Minha Conta</button>
+    </div>
   </main>
 
   <script>
-    const userData = localStorage.getItem('usuario');
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- CONFIGURAÇÃO ---
+      const BASE_URL = 'http://localhost:3000';
+      const USER_ID = "1"; // ID do usuário que estamos gerenciando. 
 
-    if (userData) {
-      const usuario = JSON.parse(userData);
-      document.getElementById('user-info').innerHTML = `
-        <p><strong>Nome:</strong> ${usuario.nome}</p>
-        <p><strong>Email:</strong> ${usuario.email}</p>
-      `;
-    } else {
-      document.getElementById('user-info').innerHTML = "<p>Nenhuma informação de usuário encontrada.</p>";
-    }
+      // --- ELEMENTOS DO DOM ---
+      const accountDetails = document.getElementById('account-details');
+      const editFormContainer = document.getElementById('edit-form-container');
+      const editButton = document.getElementById('edit-button');
+      const cancelEditButton = document.getElementById('cancel-edit-button');
+      const deleteAccountButton = document.getElementById('delete-account-button');
+      const editForm = document.getElementById('edit-form');
+      
+      // Displays
+      const userNameDisplay = document.getElementById('user-name');
+      const userEmailDisplay = document.getElementById('user-email');
+      const userPreferencesDisplay = document.getElementById('user-preferences');
+      const userHistoryDisplay = document.getElementById('user-history');
+      const userFavoritesDisplay = document.getElementById('user-favorites');
 
-    function logout() {
-      localStorage.removeItem('usuario');
-      window.location.href = "login.html";
-    }
+      // Inputs do formulário
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+
+      // --- FUNÇÕES DE RENDERIZAÇÃO ---
+      const renderList = (element, items, emptyText) => {
+        element.innerHTML = '';
+        if (items && items.length > 0) {
+          items.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = item; // Simples para histórico e preferências
+            element.appendChild(li);
+          });
+        } else {
+          element.innerHTML = `<li>${emptyText}</li>`;
+        }
+      };
+      
+      const renderFavorites = (element, items) => {
+        element.innerHTML = '';
+        if (items && items.length > 0) {
+          items.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = `<img src="${item.poster || 'https://via.placeholder.com/40x60'}" alt="Poster"> ${item.titulo}`;
+            element.appendChild(li);
+          });
+        } else {
+          renderList(element, null, 'Nenhum livro favorito adicionado.');
+        }
+      };
+
+
+      // --- FUNÇÕES DE FETCH (BUSCA DE DADOS) ---
+
+      function fetchAllData() {
+        // 1. Buscar dados do usuário (nome, email)
+        fetch(`${BASE_URL}/usuarios/${USER_ID}`)
+          .then(response => response.json())
+          .then(user => {
+            userNameDisplay.textContent = user.nome;
+            userEmailDisplay.textContent = user.email;
+            nameInput.value = user.nome;
+            emailInput.value = user.email;
+          })
+          .catch(error => console.error('Erro ao buscar dados do usuário:', error));
+
+        // 2. Buscar dados de recomendações (preferências, histórico)
+        fetch(`${BASE_URL}/lerRecomendacoes`)
+          .then(response => response.json())
+          .then(data => {
+            renderList(userPreferencesDisplay, data.usuario.preferencias, 'Nenhuma preferência definida.');
+            const historicoTitulos = data.lerHistorico.map(livro => livro.titulo);
+            renderList(userHistoryDisplay, historicoTitulos, 'Nenhum livro no histórico.');
+          })
+          .catch(error => console.error('Erro ao buscar recomendações:', error));
+
+        // 3. Buscar favoritos do usuário
+        fetch(`${BASE_URL}/favoritos?usuarioId=${USER_ID}`)
+          .then(response => response.json())
+          .then(favoritos => {
+            renderFavorites(userFavoritesDisplay, favoritos);
+          })
+          .catch(error => console.error('Erro ao buscar favoritos:', error));
+      }
+
+      // --- LÓGICA DE EVENTOS ---
+      
+      fetchAllData(); // Carrega todos os dados quando a página é aberta
+
+      editButton.addEventListener('click', () => {
+        accountDetails.style.display = 'none';
+        editFormContainer.style.display = 'block';
+      });
+
+      cancelEditButton.addEventListener('click', () => {
+        accountDetails.style.display = 'block';
+        editFormContainer.style.display = 'none';
+      });
+
+      editForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const updatedData = { nome: nameInput.value, email: emailInput.value };
+
+        fetch(`${BASE_URL}/usuarios/${USER_ID}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updatedData),
+        })
+        .then(() => {
+          alert('Dados atualizados com sucesso!');
+          fetchAllData(); // Re-busca todos os dados para atualizar a tela
+          accountDetails.style.display = 'block';
+          editFormContainer.style.display = 'none';
+        })
+        .catch(error => console.error('Erro ao atualizar usuário:', error));
+      });
+
+      deleteAccountButton.addEventListener('click', function() {
+        if (confirm('Você tem CERTEZA que deseja excluir sua conta? Esta ação é irreversível.')) {
+          fetch(`${BASE_URL}/usuarios/${USER_ID}`, { method: 'DELETE' })
+            .then(response => {
+              if (response.ok) {
+                alert('Conta excluída com sucesso.');
+                document.body.innerHTML = '<h1>Conta excluída.</h1>';
+              } else {
+                alert('Ocorreu um erro ao excluir a conta.');
+              }
+            })
+            .catch(error => console.error('Erro ao excluir usuário:', error));
+        }
+      });
+    });
   </script>
-  <script src="/src/public/scripts/script.js"></script>
-  <footer>
-    <div class="footer-links">
-      <a href="#">Produtos</a>
-      <a href="#">Parcerias</a>
-      <a href="#">Recursos</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
-    </div>
-    <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
-  </footer>
-
-  <script src="/src/public/scripts/script.js"></script>
 </body>
 </html>

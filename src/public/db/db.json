@@ -3,14 +3,21 @@
     "usuario": {
       "id": "001",
       "nome": "Rodrigo Duarte",
-      "preferencias": ["Ficção", "Clássicos", "Literatura Brasileira"],
+      "preferencias": [
+        "Ficção",
+        "Clássicos",
+        "Literatura Brasileira"
+      ],
       "dataAtualizacao": "2025-04-27T14:30:00Z"
     },
     "lerHistorico": [
       {
         "idLivro": "001",
         "titulo": "Memórias Póstumas de Brás Cubas",
-        "genero": ["Literatura Brasileira", "Clássicos"]
+        "genero": [
+          "Literatura Brasileira",
+          "Clássicos"
+        ]
       }
     ],
     "recomendacoesAtuais": [],
@@ -22,7 +29,10 @@
         "idLivro": "001",
         "titulo": "Memórias Póstumas de Brás Cubas",
         "autor": "Machado de Assis",
-        "genero": ["Literatura Brasileira", "Clássicos"],
+        "genero": [
+          "Literatura Brasileira",
+          "Clássicos"
+        ],
         "descricao": "É um romance publicado em 1881 e considerado uma das obras mais importantes da literatura brasileira. O livro é marcado pelo tom irônico, pelas críticas à sociedade brasileira do século XIX e pela inovação formal.",
         "imagem": "bras-cubas.jpg",
         "pdf": "memoriasBras.pdf"
@@ -31,7 +41,10 @@
         "idLivro": "002",
         "titulo": "Capitães da Areia",
         "autor": "Jorge Amado",
-        "genero": ["Literatura Brasileira", "Clássicos"],
+        "genero": [
+          "Literatura Brasileira",
+          "Clássicos"
+        ],
         "descricao": "Esse livro denuncia as injustiças sociais e a marginalização da infância abandonada, com uma linguagem rica e sensível que mistura crítica social e lirismo. É considerada uma das obras mais importantes da literatura brasileira do século XX.",
         "imagem": "capitaes-areia.jpg",
         "pdf": "capitaes-da-areia.pdf"
@@ -40,7 +53,10 @@
         "idLivro": "003",
         "titulo": "O cortiço",
         "autor": "Aluísio Azevedo",
-        "genero": ["Literatura Brasileira", "Clássicos"],
+        "genero": [
+          "Literatura Brasileira",
+          "Clássicos"
+        ],
         "descricao": "É um romance naturalista escrito por Aluísio Azevedo, publicado em 1890. A obra retrata a vida num cortiço — uma habitação coletiva — no Rio de Janeiro do século XIX, expondo o cotidiano de seus moradores, suas relações, conflitos e a dura realidade social marcada por pobreza, exploração e preconceito.",
         "imagem": "o-cortico.jpg",
         "pdf": "cortico.pdf"
@@ -49,7 +65,10 @@
         "idLivro": "004",
         "titulo": "Como Salvar a Democracia",
         "autor": "Steven Levitsky",
-        "genero": ["Política", "Não Ficção"],
+        "genero": [
+          "Política",
+          "Não Ficção"
+        ],
         "descricao": "A obra reúne contribuições de acadêmicos e especialistas renomados que oferecem análises profundas e propostas concretas para fortalecer os pilares democráticos.",
         "imagem": "salvar-democracia.jpg",
         "pdf": "livro.pdf"
@@ -58,7 +77,10 @@
         "idLivro": "005",
         "titulo": "A Arte da Guerra",
         "autor": "Sun Tzu",
-        "genero": ["Clássicos", "Não Ficção"],
+        "genero": [
+          "Clássicos",
+          "Não Ficção"
+        ],
         "descricao": "O livro ensina princípios de liderança, tática e estratégia que vão além do campo de batalha, sendo amplamente aplicado em áreas como negócios, política e desenvolvimento pessoal.",
         "imagem": "arte_guerra.jpg",
         "pdf": "arte_guerra.pdf"
@@ -67,7 +89,10 @@
         "idLivro": "006",
         "titulo": "O Príncipe",
         "autor": "Maquiavel",
-        "genero": ["Política", "Clássicos"],
+        "genero": [
+          "Política",
+          "Clássicos"
+        ],
         "descricao": "É um tratado político escrito no século XVI que oferece conselhos diretos sobre como conquistar, manter e exercer o poder.",
         "imagem": "o_principe.jpg",
         "pdf": "o_principe_maquiavel.pdf"
@@ -76,7 +101,10 @@
         "idLivro": "007",
         "titulo": "Inteligência Emocional",
         "autor": "Daniel Goleman",
-        "genero": ["Autoajuda", "Psicologia"],
+        "genero": [
+          "Autoajuda",
+          "Psicologia"
+        ],
         "descricao": "É um livro publicado em 1995 que revolucionou a forma como se entende a inteligência humana. Goleman argumenta que o sucesso pessoal e profissional não depende apenas do QI, mas também da capacidade de reconhecer, compreender e gerenciar as próprias emoções e as dos outros — inteligência emocional.",
         "imagem": "inteligencia-emocional.jpg",
         "pdf": "inteligencia-emocional.pdf"
@@ -85,7 +113,10 @@
         "idLivro": "008",
         "titulo": "1984",
         "autor": "George Orwell",
-        "genero": ["Romance", "Distopia"],
+        "genero": [
+          "Romance",
+          "Distopia"
+        ],
         "descricao": "É um romance distópico publicado em 1949. A obra retrata um futuro sombrio em que o mundo é governado por regimes totalitários. A história se passa na fictícia Oceânia, onde o Partido, liderado pelo enigmático Grande Irmão, controla todos os aspectos da vida — desde os pensamentos das pessoas até a história oficial.",
         "imagem": "1984.jpg",
         "pdf": "livro-1984.pdf"
@@ -94,7 +125,10 @@
         "idLivro": "009",
         "titulo": "Memórias do Subsolo",
         "autor": "Fiódor Dostoiévski",
-        "genero": ["Romance", "Psicologia"],
+        "genero": [
+          "Romance",
+          "Psicologia"
+        ],
         "descricao": "Escrito por Fiódor Dostoiévski e publicado em 1864, é um romance psicológico considerado precursor do existencialismo. A obra é narrada por um homem amargurado e recluso — o homem do subsolo — que vive isolado da sociedade em São Petersburgo.",
         "imagem": "subsolo.jpg",
         "pdf": "memorias-subsolo.pdf"
@@ -106,12 +140,6 @@
     }
   },
   "usuarios": [
-    {
-      "id": "1",
-      "nome": "Admin",
-      "email": "admin@teste.com",
-      "senha": "123456"
-    },
     {
       "id": "9",
       "nome": "Bianca Cordeiro",
@@ -141,6 +169,13 @@
       "nome": "oiii",
       "email": "oiii@g",
       "senha": "123456"
+    },
+    {
+      "id": "283c",
+      "nome": "joaquim",
+      "email": "joaquim@gmail.com",
+      "senha": "123456",
+      "admin": false
     }
   ],
   "favoritos": [
