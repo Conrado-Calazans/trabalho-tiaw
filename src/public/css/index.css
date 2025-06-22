@@ -1,198 +1,401 @@
+/* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS DE COR (TEMA DEEP SKY BLUE) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --accent-blue: #00BFFF;       /* Azul da imagem (Deep Sky Blue) */
+    --accent-blue-dark: #009ACD;   /* Versão mais escura para hover */
+    --primary-blue-dark: #008CBA;   /* Azul escuro para fundos e títulos */
+    --light-blue-bg: #e6f7ff;     /* Fundo azul bem claro */
+    --dark-text: #212529;         /* Cinza Escuro para Texto Principal */
+    --secondary-text: #6c757d;    /* Cinza Médio para Texto Secundário */
+    --background-color: #ffffff;
+    --border-color: #dee2e6;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --border-radius: 8px;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
-    background-color: #f9f9f9;
+    padding: 0;
+    color: var(--dark-text);
+    background-color: var(--background-color);
 }
 
+/* --- CABEÇALHO PRINCIPAL --- */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
+    background: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.top-bar .logo {
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+    gap: 1.5rem;
 }
 
-.top-bar .logo img {
-    max-width: 150px;
-    margin-right: 20px;
+.logo img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
 }
 
-.textos h1 {
-    font-size: 28px;
-    margin: 10px 0 5px;
+.logo .textos h1 {
+    font-size: 2rem;
+    color: var(--primary-blue-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
-.textos p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.logo .textos p {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    line-height: 1.5;
+    margin-top: 0;
 }
 
-.explorar-btn {
-    background-color: #ffffff;
-    color: #4CAF50;
-    padding: 10px 20px;
+/* --- BOTÕES PRINCIPAIS --- */
+.explorar-btn, .btn-salvar, .card button, #bookForm button, .admin-controls button {
+    background-color: var(--accent-blue);
+    color: white;
     border: none;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 191, 255, 0.3);
 }
 
-.explorar-btn:hover {
-    background-color: #e8f5e9;
+.explorar-btn:hover, .btn-salvar:hover, .card button:hover, #bookForm button:hover, .admin-controls button:hover {
+    background-color: var(--accent-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.4);
 }
 
+
+/* --- CABEÇALHO SECUNDÁRIO E NAVEGAÇÃO --- */
 .secondary-header {
-    background-color: #388E3C;
-    padding: 10px 0;
-    text-align: center;
+    background-color: var(--primary-blue-dark);
+    padding: 15px 20px;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.menu a,
-.menu button {
+.secondary-header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secondary-header .menu a, .secondary-header .menu button {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    font-weight: 500;
     padding: 8px 15px;
-    border: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
     background: none;
+    border: none;
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 14px;
 }
 
-.menu button:hover,
-.menu a:hover {
-    background-color: #2E7D32;
-    border-radius: 5px;
+.secondary-header .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-.hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
+.secondary-header .menu button#notificacoesBtn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-.destaques {
+.secondary-header .menu #authButton {
+    background-color: var(--accent-blue);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.secondary-header .menu #authButton:hover {
+    background-color: var(--accent-blue-dark);
+}
+
+/* --- SEÇÃO HERO --- */
+.hero {
+    text-align: center;
     padding: 40px 20px;
+    background: white;
+}
+.hero img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+}
+
+/* --- SEÇÃO DE DESTAQUES E CARDS --- */
+.destaques {
+    padding: 60px 20px;
+    background: var(--light-blue-bg);
     text-align: center;
 }
 
 .destaques h2 {
-    color: #333;
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.admin-controls {
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--primary-blue-dark);
+    margin-bottom: 40px;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+.card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--primary-blue-dark);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.card .card-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card .card-actions button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.card .remover-btn, .card .editar-btn {
+    background-color: #6c757d; /* Cinza secundário */
+}
+.card .remover-btn:hover, .card .editar-btn:hover {
+    background-color: #5a6268; /* Cinza mais escuro */
+}
+
+
+/* --- FOOTER --- */
 footer {
-    background-color: #4CAF50;
+    background: var(--primary-blue-dark);
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
+    padding: 30px 20px;
+    margin-top: 40px;
 }
 
-/* Modal geral */
+/* --- MODAIS (GERAL) --- */
 .modal {
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
     background-color: #fff;
     margin: 10% auto;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 30px 40px;
+    border: none;
     width: 90%;
-    max-width: 500px;
-}
-
-.modal-content h3 {
-    margin-top: 0;
+    max-width: 550px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    position: relative;
+    animation: slideIn 0.4s ease;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
+    color: #888;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.close:hover {
-    color: #000;
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+
+/* --- MODAL DE NOTIFICAÇÕES --- */
+.modal-content h3 {
+    font-size: 1.8rem;
+    color: var(--primary-blue-dark);
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-.ver-tudo {
-    display: inline-block;
-    margin-top: 10px;
+.listaNotificacoes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listaNotificacoes li {
+    background-color: var(--light-blue-bg);
+    border-left: 4px solid var(--accent-blue);
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--dark-text);
+}
+
+.listaNotificacoes li strong {
+    color: var(--primary-blue-dark);
+    font-weight: 600;
+}
+
+a.ver-tudo {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: var(--accent-blue);
+    font-weight: 600;
     text-decoration: none;
-    color: #4CAF50;
-    font-weight: bold;
 }
 
-.ver-tudo:hover {
+a.ver-tudo:hover {
+    color: var(--accent-blue-dark);
     text-decoration: underline;
 }
 
-#bookForm input,
-#bookForm textarea,
-#bookForm button {
+/* --- MODAL DE FORMULÁRIO DE LIVRO (CRUD) --- */
+#bookForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#bookForm label {
+    font-weight: 600;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+#bookForm input, #bookForm textarea {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#saveBookBtn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+#bookForm input:focus, #bookForm textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.25);
 }
 
-#saveBookBtn:hover {
-    background-color: #45a049;
+#bookForm textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
-/* Responsividade básica */
-@media (max-width: 600px) {
-    .top-bar .logo {
+#bookForm button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.admin-controls {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .logo {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .logo .textos h1 {
+        font-size: 1.8rem;
     }
 
-    .top-bar .logo img {
-        margin-right: 0;
-        margin-bottom: 10px;
+    .hero img {
+        max-width: 80%;
     }
 
-    .menu a,
-    .menu button {
-        display: block;
-        margin: 5px 0;
+    .secondary-header .menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .secondary-header .menu a, .secondary-header .menu button {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        padding: 20px;
     }
 }
