@@ -38,8 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const livros = isFavPage ? getFavoritos() : getLivros();
         const favoritos = getFavoritos();
         const isAdmin = window.location.pathname.includes('admin.html');
+
+        if (isFavPage && livros.length === 0) {
+            livrosUl.innerHTML = `<li style="list-style:none; width:100%; text-align:center; color:#888; font-size:1.1rem; margin-top:32px;">
+                Nenhum livro foi favoritado ainda.
+            </li>`;
+            return;
+        }
+
         livros.forEach((livro, idx) => {
-            // Em fav2.html, idx é do array de favoritos!
             const isFavorito = favoritos.some(f => f.titulo === livro.titulo && f.autor === livro.autor);
             const li = document.createElement('li');
             li.className = 'book-card';
@@ -50,7 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="book-desc">${livro.descricao}</p>
                     <div class="book-actions">
                         <button class="read-btn" onclick="openPDF('${livro.pdf || '#'}')">Ler</button>
-                        <span class="favorite" onclick="${isFavPage ? `removerFavorito(${idx})` : `toggleFavorito(${idx})`}" title="${isFavPage ? 'Remover dos favoritos' : (isFavorito ? 'Remover dos favoritos' : 'Adicionar aos favoritos')}" style="color:${isFavorito ? '#ff2222' : '#bbb'}">&#10084;</span>
+                        <span class="favorite" onclick="${
+                            isFavPage
+                                ? `removerFavorito(${idx})`
+                                : `toggleFavorito(${idx})`
+                        }" title="${
+                            isFavPage
+                                ? 'Remover dos favoritos'
+                                : (isFavorito ? 'Remover dos favoritos' : 'Adicionar aos favoritos')
+                        }" style="color:${isFavorito ? '#ff2222' : '#bbb'}">&#10084;</span>
                         ${isAdmin && !isFavPage ? `
                             <button class="edit-btn" onclick="editarLivro(${idx})" title="Editar" style="margin-left:10px;">✏️</button>
                             <button class="remove-btn" onclick="removerLivro(${idx})" title="Remover" style="margin-left:5px;">🗑️</button>
@@ -62,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Corrija as funções globais:
     window.removerFavorito = function(idx) {
         const favoritos = getFavoritos();
         favoritos.splice(idx, 1);
@@ -81,11 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         setFavoritos(favoritos);
         renderLivros();
-        // Se estiver em outra página, também atualiza fav2.html se estiver aberta em outra aba
-        if (window.location.pathname.includes('fav2.html')) {
-            renderLivros();
-        }
-        // Atualiza fav2.html em outras abas/janelas abertas
         localStorage.setItem('fav_sync', Date.now());
     };
 
@@ -185,4 +196,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderLivros();
+
+    if (window.location.pathname.includes('fav2.html', 'admin.html')) {
+        const livros = getFavoritos ? getFavoritos() : [];
+        const livrosUl = document.getElementById('livros');
+        if (livrosUl && (!livros || livros.length === 0)) {
+            livrosUl.innerHTML = `<li style="list-style:none; width:100%; text-align:center; color:#888; font-size:1.1rem; margin-top:32px;">
+                Nenhum livro foi favoritado ainda.
+            </li>`;
+        }
+    }
 });
