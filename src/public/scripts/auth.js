@@ -1,55 +1,46 @@
-// auth.js (CORRIGIDO E INTEGRADO)
+// auth.js (ATUALIZADO PARA GERENCIAR ADMIN)
 
-// URL base do JSON Server
 const API_URL = 'http://localhost:3000';
 
 class AuthManager {
     constructor() {
-        // --- MUDANÇA ---
-        // Agora o estado é baseado no ID guardado no localStorage
-        this.loggedUserId = localStorage.getItem('loggedUserId');
+        // O estado agora é baseado no objeto do usuário salvo no sessionStorage
+        this.usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioLogado'));
     }
 
-    // --- MUDANÇA ---
-    // Salva APENAS O ID do usuário no localStorage
-    salvarIdUsuario(id) {
-        localStorage.setItem('loggedUserId', id);
-        this.loggedUserId = id;
+    // <-- MUDANÇA: Salva o objeto COMPLETO do usuário na sessão
+    salvarSessaoUsuario(usuario) {
+        sessionStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+        this.usuarioLogado = usuario;
     }
 
-    // --- MUDANÇA ---
-    // Recupera o ID do usuário do localStorage
-    getLoggedUserId() {
-        return localStorage.getItem('loggedUserId');
+    // <-- MUDANÇA: Recupera o objeto do usuário da sessão
+    getUsuarioLogado() {
+        return this.usuarioLogado;
     }
 
-    // --- MUDANÇA ---
-    // Limpa o localStorage e redireciona
+    // <-- MUDANÇA: Limpa a sessão (sessionStorage) e redireciona
     logout() {
-        localStorage.removeItem('loggedUserId');
-        this.loggedUserId = null;
-        // Redireciona para a página de login, não para a index.
-        window.location.href = 'login.html'; 
+        sessionStorage.removeItem('usuarioLogado');
+        this.usuarioLogado = null;
+        window.location.href = 'login.html';
     }
 
-    // Verifica se usuário está logado
     isLogado() {
-        return this.loggedUserId !== null;
+        return this.usuarioLogado !== null;
     }
 
     // Faz login do usuário
     async login(email, senha) {
         try {
-            const response = await fetch(`${API_URL}/usuarios`);
+            const response = await fetch(`${API_URL}/usuarios?email=${email}&senha=${senha}`);
             const usuarios = await response.json();
-            
-            const usuario = usuarios.find(u => u.email === email && u.senha === senha);
-            
-            if (usuario) {
-                // --- MUDANÇA ---
-                // Chama a nova função para salvar apenas o ID no localStorage
-                this.salvarIdUsuario(usuario.id); 
-                return { sucesso: true, usuario };
+
+            // A busca com query params retorna um array. Se o array não estiver vazio, o usuário foi encontrado.
+            if (usuarios.length > 0) {
+                const usuario = usuarios[0];
+                this.salvarSessaoUsuario(usuario); // <-- MUDANÇA: Salva o usuário inteiro na sessão
+                return { sucesso: true, usuario: usuario }; // Retorna o objeto do usuário
             } else {
                 return { sucesso: false, erro: 'Email ou senha inválidos' };
             }
@@ -59,17 +50,17 @@ class AuthManager {
         }
     }
 
-    // Função de cadastro (sem alterações na lógica interna)
+    // Cadastro agora garante que "admin" é sempre false para novos usuários
     async cadastrar(nome, email, senha) {
         try {
-            const response = await fetch(`${API_URL}/usuarios`);
-            const usuarios = await response.json();
-            
-            const emailExiste = usuarios.find(u => u.email === email);
-            if (emailExiste) {
+            // Verifica se o email já existe
+            const responseVerifica = await fetch(`${API_URL}/usuarios?email=${email}`);
+            const usuariosExistentes = await responseVerifica.json();
+            if (usuariosExistentes.length > 0) {
                 return { sucesso: false, erro: 'Este email já está cadastrado' };
             }
 
+            // <-- GARANTIA: Todo novo usuário não é admin
             const novoUsuario = { nome, email, senha, admin: false };
 
             const responsePost = await fetch(`${API_URL}/usuarios`, {
@@ -91,17 +82,16 @@ class AuthManager {
     }
 }
 
-// Instância global do gerenciador de autenticação
+// Instância global
 const authManager = new AuthManager();
 
-// Event listeners para formulários (com pequeno ajuste no redirecionamento)
+// Event listeners para os formulários
 document.addEventListener('DOMContentLoaded', () => {
     // Formulário de login
     const formLogin = document.getElementById('form-login');
     if (formLogin) {
         formLogin.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
             const email = document.getElementById('email').value;
             const senha = document.getElementById('senha').value;
             const mensagem = document.getElementById('mensagem');
@@ -110,10 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (resultado.sucesso) {
                 mensagem.innerHTML = '<div class="sucesso">Login realizado com sucesso! Redirecionando...</div>';
+                
                 setTimeout(() => {
-                    // --- MUDANÇA ---
-                    // Redireciona para a página da conta, não para a index
-                    window.location.href = 'minha_conta.html'; 
+                    // <-- MUDANÇA CRÍTICA: Redirecionamento com base no status de admin
+                    if (resultado.usuario.admin) {
+                        window.location.href = 'admin.html'; // Se for admin, vai para a página de admin
+                    } else {
+                        window.location.href = 'index.html'; // Se não for, vai para a página inicial (ou minha_conta.html)
+                    }
                 }, 1500);
             } else {
                 mensagem.innerHTML = `<div class="erro">${resultado.erro}</div>`;
@@ -121,12 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Formulário de cadastro (sem alterações, pois já redireciona para o login)
+    // Formulário de cadastro (lógica interna não precisa mudar)
     const formCadastro = document.getElementById('form-cadastro');
     if (formCadastro) {
         formCadastro.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('email').value;
             const senha = document.getElementById('senha').value;

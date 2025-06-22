@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração - Capitulo Aberto</title>
+    
+    <script src="/src/public/scripts/verificar-admin.js"></script>
+    
     <link rel="stylesheet" href="/src/public/css/style.css">
     <link rel="stylesheet" href="/src/public/css/style3.css">
 </head>
@@ -21,10 +24,10 @@
     </header>
 
     <header class="secondary-header">
-      <div class="menu">               
-        <a href="index.html">Sair</a> 
-      </div>
-    </header>    
+        <div class="menu">
+            <a href="#" id="logout-btn">Sair</a> 
+        </div>
+    </header>      
     <main>
         <section id="book-form">
             <h2>Adicionar Novo Livro</h2>
@@ -58,7 +61,16 @@
     <footer>        
         <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
     </footer>
+    
+    <script src="/src/public/scripts/auth.js"></script> 
     <script src="/src/public/scripts/books.js"></script>
     <script src="/src/public/scripts/script.js"></script>
+
+    <script>
+        document.getElementById('logout-btn').addEventListener('click', function(e) {
+            e.preventDefault(); // Impede que o link "#" mude a URL
+            authManager.logout();
+        });
+    </script>
 </body>
 </html>
