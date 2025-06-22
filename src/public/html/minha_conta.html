@@ -7,21 +7,168 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/public/css/style.css">
   <style>
-    /* Seu CSS pode continuar aqui ou ser movido para um arquivo .css */
     :root {
       --primary-color: #2C3E50;
       --secondary-color: #3498db;
       --success-color: #2ecc71;
       --danger-color: #e74c3c;
+      --light-gray-color: #f8f9fa;
+      --border-color: #e9ecef;
+      --text-color: #495057;
     }
-    body { font-family: 'Open Sans', sans-serif; }
-    /* ... (resto do seu style) ... */
-    .secondary-header .menu a.logout-button { background-color: #c0392b; }
-    .secondary-header .menu a.logout-button:hover { background-color: var(--danger-color); }
-    .container { max-width: 800px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 8px; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--light-gray-color);
+      color: var(--text-color);
+    }
+    
+    .secondary-header .menu a.logout-button {
+      background-color: #c0392b;
+    }
+
+    .secondary-header .menu a.logout-button:hover {
+      background-color: var(--danger-color);
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0; /* Removido padding para os cartões cuidarem disso */
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    /* --- ESTILOS ADICIONADOS --- */
+
+    /* Estilo base para os cartões */
+    .account-card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .account-card h2, .account-card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    /* Grupo de informações (Nome, Email) */
+    .info-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .info-group:last-of-type {
+      border-bottom: none;
+    }
+
+    .info-group label {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .info-group p {
+      margin: 0;
+      color: var(--text-color);
+    }
+
+    #edit-button {
+      margin-top: 20px;
+    }
+    
+    /* Estilos do Formulário de Edição */
+    #edit-form-container h2 {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box; /* Garante que padding não afete a largura total */
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+    
+    .form-actions {
+      display: flex;
+      gap: 15px; /* Espaço entre os botões */
+      margin-top: 20px;
+    }
+
+    /* Estilos da Zona de Perigo */
+    .danger-zone {
+      border: 1px solid var(--danger-color);
+      background-color: #fbecec;
+    }
+
+    .danger-zone h3 {
+      color: var(--danger-color);
+      font-weight: 700;
+    }
+    
+    .danger-zone p {
+      margin: 0 0 15px 0;
+      color: #a94442;
+    }
+
+    /* Estilos gerais de botões (opcional, pode já ter em style.css) */
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn-primary {
+      background-color: var(--secondary-color);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background-color: #bdc3c7;
+      color: #fff;
+    }
+    
+    .btn-danger {
+      background-color: var(--danger-color);
+      color: white;
+    }
   </style>
 
   <script src="/src/public/scripts/verificar-login.js"></script>
@@ -49,7 +196,8 @@
   </header>
 
   <main class="container">
-    <div id="account-details">
+    
+    <div id="account-details" class="account-card">
       <h2>Minhas Informações</h2>
       <div class="info-group">
         <label>Nome:</label>
@@ -59,11 +207,10 @@
         <label>Email:</label>
         <p id="user-email">Carregando...</p>
       </div>
-      <button id="edit-button" class="btn">Editar Informações</button>
+      <button id="edit-button" class="btn btn-primary">Editar Informações</button>
+    </div>
 
-      </div>
-
-    <div id="edit-form-container" style="display: none;">
+    <div id="edit-form-container" class="account-card" style="display: none;">
       <h2>Editar Minha Conta</h2>
       <form id="edit-form">
         <div class="form-group">
@@ -81,13 +228,13 @@
       </form>
     </div>
 
-    <div class="danger-zone">
+    <div class="account-card danger-zone">
       <h3>Zona de Perigo</h3>
       <p>A exclusão da sua conta é uma ação permanente e todos os seus dados serão perdidos.</p>
       <button id="delete-account-button" class="btn btn-danger">Excluir Minha Conta</button>
     </div>
-  </main>
 
+  </main>
   <script src="/src/public/scripts/auth.js"></script>
   <script src="/src/public/scripts/minha-conta.js"></script>
 
