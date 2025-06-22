@@ -14,7 +14,7 @@ function openPDF(pdfPath) {
 // Função principal de recomendações
 async function carregarRecomendacoes() {
     try {
-        const response = await fetch('db.json');
+        const response = await fetch('/db/db.json'); 
         const db = await response.json();
 
         // Preferências do usuário e histórico de leitura
