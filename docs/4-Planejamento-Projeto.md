@@ -8,7 +8,7 @@
   
 ### Sprint 1
 - _Scrum master_: Bianca Larisse Cordeiro de Moura
-- Protótipos: AlunoY
+- Protótipos: Bianca Larisse Cordeiro de Moura, Rafael Franklin Coelho Barbosa
 - Desenvolvedor _front-end_: Conrado Calazans
 - Testes: Todos participantes testaram as aplicações.
 - Documentação: Bianca Larisse Cordeiro de Moura, Conrado Calazans
@@ -20,49 +20,51 @@
 - Testes: Todos participantes testaram as aplicações.
 - 
 ### Sprint 3
+- _Prodct Owmer_: Conrado Calazans
 - _Scrum master_: Bianca Larisse Cordeiro de Moura
-- Desenvolvedor _front-end_: Thales Cauã Martins 
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- Desenvolvedores  Thales Cauã Martins, Rafael Franklin Coelho Barbosa, Arthur Felipe
+- Testes: Todos participantes testaram as aplicações.
 
   
 ## Quadro de tarefas
-<img src="/docs/images-projeto/quadro_tarefas.png" alt="Quadro de Tarefas">
+<img src="/docs/images-projeto/CA_kanban.png" alt="Quadro de Tarefas">
 
 
 
 ## Sprint 1
 
-Atualizado em: 21/04/2024
+Atualizado em: 18/05/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Bianca Larisse Cordeiro de Moura        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 18/04/2025      |
-| Bianca Larisse Cordeiro de Moura        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️    |  18/04/2025  |
-| Conrado Calazans de Souza  | Catálogo de Livros  | 25/04/2025     | 27/042025 | ✔️     |  27/04/2025   |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Bianca Larisse Cordeiro de Moura  | Perfil do usuário |  26/03/2025  | 18/05/2025 | 📝    |  18/05/2025  |
+| Conrado Calazans de Souza  | Catálogo de Livros  | 26/03/2025   | 18/05/2025 | 📝     |  18/05/2025   |
+| Rafael Franklin Coelho Barbosa  |  Recomendações   |    26/03/2025       | 18/05/2025 | 📝    |  18/05/2025   |
+| Thales Cauâ Martins  |  Leitura   |    26/03/2025       | 18/05/2025 | 📝    |  18/05/2025  |
 
 ## Sprint 2
 
-Atualizado em: 21/04/2024
+Atualizado em: 08/06/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Home-Page        | 01/02/2024     | 07/03/2024 | ✔️    | 05/01/2005      |
-| AlunaZ        | CSS Unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| Bianca Larisse Cordeiro de Moura        | Página de login  | 01/02/2024     | 07/03/2024 | 📝     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| Bianca Larisse Cordeiro de Moura  | Página de login  | 18/05/2025     | 08/06/2025 | 📝     | 08/06/2025    |
+| Conrado Calazans de Souza  |  Pesquisar  | 18/05/2025      | 08/06/2025 | 📝    | 08/06/2025      |
+| Rafael Franklin Coelho Barbosa  |  Recomendações / Administração  | 18/05/2025      | 08/06/2025 | 📝    |  08/06/2025     |
+| Thales Cauâ Martins  | Destaques e Categorias  |  18/05/2025     | 08/06/2025 | 📝    |   08/06/2025    |
+| Arthur Felipe  | Notificações  |  18/05/2025     | 08/06/2025 | 📝    |   08/06/2025    |
 
 ## Sprint 3
 
-Atualizado em: 21/04/2024
+Atualizado em: 22/06/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Bianca Larisse Cordeiro de Moura        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 18/04/2025      |
-| Bianca Larisse Cordeiro de Moura        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️    | 18/04/2025   |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Bianca Larisse Cordeiro de Moura  | Login / Perfil / Documentação | 18/05/2025     | 22/06/2025 | ✔️   | 22/06/2025    |
+| Conrado Calazans de Souza  |  Catalogo / Pesquisar / Hospedagem  | 18/05/2025      | 22/06/2025 | ✔️  | 22/06/2025      |
+| Rafael Franklin Coelho Barbosa  |  Recomendações / Administração  | 22/05/2025      | 22/06/2025 | ✔️  |  22/06/2025     |
+| Thales Cauâ Martins  | Destaques / Categorias / Documentação  |  18/05/2025     | 22/06/2025 | ✔️  |   22/06/2025    |
+| Arthur Felipe  | Notificações  |  18/05/2025  | 22/06/2025 |  ✔️  |   22/06/2025    |
 
 Legenda:
 - ✔️: terminado
@@ -72,14 +74,12 @@ Legenda:
 
 ## Ferramentas
 
-> Liste quais ferramentas foram empregadas no desenvolvimento do  projeto, justificando a escolha de cada uma delas. Use o formato abaixo como exemplo.
-
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de diagramação.
-- <em>Frameworks</em> 
-- Outras ferramentas externas
+- Editor de código: Visual Studio Code
+- Diagramação: Miro, Figma
+- <em>Framework: Bootstrap</em>
+- Outras ferramentas externas: <em>Github, Discord, WhatsApp<em>
 
 
 ## Links Úteis

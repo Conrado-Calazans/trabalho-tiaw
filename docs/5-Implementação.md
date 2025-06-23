@@ -85,20 +85,38 @@ Os arquivos do projeto (<em>HTML</em>, <em>CSS</em>, <em>JS</em> e livros digita
 ## Tela principal do sistema
 
 <em>Descrição da tela principal do sistema.</em>  
-[`Tela principal do sistema`](images/)
+[`Tela principal do sistema`](/docs/images-projeto/telainicial1.png)
 
 ## Telas do requisito 1
 
-<em>Descrição da tela relativa à atividade 1.</em>  
-[`Tela da atividade 1`](images/)
+<em>Perfil do Usuario</em>  
+[`Perfil`](/docs/images-projeto/minha-conta.png)
 
-<em>Descrição da tela relativa à atividade 2.</em>  
-[`Tela da atividade 2`](images/)
+<em>Catálogo de Livros</em>  
+[`Catálogo`](/docs/images-projeto/catalogo2.png)
+
+<em>Recomendados</em>  
+[`Recomendados`](/docs/images-projeto/recomendados1.png)
+
+<em>Visualizar o livro em PDF</em>  
+[`PDF Viewer`](/docs/images-projeto/clicar-ler.png)
 
 ## Telas do requisito 2
 
-<em>Descrição da tela relativa à atividade 1.</em>  
-[`Tela da atividade 1`](images/)
+<em>Autenticador</em>  
+[`Login`](/docs/images-projeto/login3.png)
 
-<em>Descrição da tela relativa à atividade 2.</em>  
-[`Tela da atividade 2`](images/)
+<em>Pesquisa de Livros</em>  
+[`Pesquisar`](/docs/images-projeto/pesquisar.png)
+
+<em>Administração de Livros</em>  
+[`Administração`](/docs/images-projeto/admin_livros.png)
+
+<em>Recomendados</em>  
+[`Recomendados`](/docs/images-projeto/recomendados1.png)
+
+<em>Notificações</em>  
+[`Notificações`](/docs/images-projeto/notificacoes2.png)
+
+<em>API Explorar</em>  
+[`Explorar`](/docs/images-projeto/buscar-api.png)
