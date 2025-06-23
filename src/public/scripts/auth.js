@@ -1,6 +1,7 @@
-// auth.js (ATUALIZADO PARA GERENCIAR ADMIN)
+// auth.js - VERSÃO CORRIGIDA PARA RENDER
 
-const API_URL = 'http://localhost:3000';
+// A MUDANÇA CRÍTICA ESTÁ AQUI:
+const API_URL = ''; // Usamos uma string vazia para criar caminhos relativos
 
 class AuthManager {
     constructor() {
@@ -8,18 +9,18 @@ class AuthManager {
         this.usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioLogado'));
     }
 
-    // <-- MUDANÇA: Salva o objeto COMPLETO do usuário na sessão
+    // Salva o objeto COMPLETO do usuário na sessão
     salvarSessaoUsuario(usuario) {
         sessionStorage.setItem('usuarioLogado', JSON.stringify(usuario));
         this.usuarioLogado = usuario;
     }
 
-    // <-- MUDANÇA: Recupera o objeto do usuário da sessão
+    // Recupera o objeto do usuário da sessão
     getUsuarioLogado() {
         return this.usuarioLogado;
     }
 
-    // <-- MUDANÇA: Limpa a sessão (sessionStorage) e redireciona
+    // Limpa a sessão (sessionStorage) e redireciona
     logout() {
         sessionStorage.removeItem('usuarioLogado');
         this.usuarioLogado = null;
@@ -33,20 +34,21 @@ class AuthManager {
     // Faz login do usuário
     async login(email, senha) {
         try {
+            // Agora a chamada será "/usuarios?email=..." que funciona no Render
             const response = await fetch(`${API_URL}/usuarios?email=${email}&senha=${senha}`);
             const usuarios = await response.json();
 
             // A busca com query params retorna um array. Se o array não estiver vazio, o usuário foi encontrado.
             if (usuarios.length > 0) {
                 const usuario = usuarios[0];
-                this.salvarSessaoUsuario(usuario); // <-- MUDANÇA: Salva o usuário inteiro na sessão
-                return { sucesso: true, usuario: usuario }; // Retorna o objeto do usuário
+                this.salvarSessaoUsuario(usuario);
+                return { sucesso: true, usuario: usuario };
             } else {
                 return { sucesso: false, erro: 'Email ou senha inválidos' };
             }
         } catch (error) {
             console.error('Erro ao fazer login:', error);
-            return { sucesso: false, erro: 'Erro de conexão. Verifique se o JSON Server está rodando.' };
+            return { sucesso: false, erro: 'Erro de conexão com o servidor.' };
         }
     }
 
@@ -60,7 +62,6 @@ class AuthManager {
                 return { sucesso: false, erro: 'Este email já está cadastrado' };
             }
 
-            // <-- GARANTIA: Todo novo usuário não é admin
             const novoUsuario = { nome, email, senha, admin: false };
 
             const responsePost = await fetch(`${API_URL}/usuarios`, {
@@ -85,7 +86,7 @@ class AuthManager {
 // Instância global
 const authManager = new AuthManager();
 
-// Event listeners para os formulários
+// Event listeners para os formulários (Nenhuma mudança necessária aqui)
 document.addEventListener('DOMContentLoaded', () => {
     // Formulário de login
     const formLogin = document.getElementById('form-login');
@@ -102,11 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 mensagem.innerHTML = '<div class="sucesso">Login realizado com sucesso! Redirecionando...</div>';
                 
                 setTimeout(() => {
-                    // <-- MUDANÇA CRÍTICA: Redirecionamento com base no status de admin
                     if (resultado.usuario.admin) {
-                        window.location.href = 'admin.html'; // Se for admin, vai para a página de admin
+                        window.location.href = 'admin.html';
                     } else {
-                        window.location.href = 'index.html'; // Se não for, vai para a página inicial (ou minha_conta.html)
+                        window.location.href = 'index.html';
                     }
                 }, 1500);
             } else {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Formulário de cadastro (lógica interna não precisa mudar)
+    // Formulário de cadastro
     const formCadastro = document.getElementById('form-cadastro');
     if (formCadastro) {
         formCadastro.addEventListener('submit', async (e) => {

@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const usuarioLogado = authManager.getUsuarioLogado(); // Pega os dados do usuário direto do nosso AuthManager
 
-    // --- CONFIGURAÇÃO ---
-    const BASE_URL = 'http://localhost:3000';
+    // --- CONFIGURAÇÃO CORRIGIDA ---
+    // A BASE_URL agora está vazia para usar caminhos relativos no Render.
+    const BASE_URL = '';
     
     // --- ELEMENTOS DO DOM ---
     const accountDetails = document.getElementById('account-details');
@@ -18,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const userNameDisplay = document.getElementById('user-name');
     const userEmailDisplay = document.getElementById('user-email');
-    // ... (outros elementos que você queira manipular) ...
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
 
@@ -31,21 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Preenche as informações básicas com os dados da sessão (mais rápido!)
         userNameDisplay.textContent = usuarioLogado.nome;
         userEmailDisplay.textContent = usuarioLogado.email;
         
-        // Preenche o formulário de edição
         nameInput.value = usuarioLogado.nome;
         emailInput.value = usuarioLogado.email;
-
-        // Aqui você pode adicionar as chamadas fetch para histórico, favoritos, etc.
-        // Ex: fetch(`${BASE_URL}/favoritos?usuarioId=${usuarioLogado.id}`).then(...)
     }
 
     // --- LÓGICA DE EVENTOS ---
 
-    // Carrega os dados assim que a página é aberta
     carregarDadosDaConta();
 
     // Botão de Logout
@@ -70,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const updatedData = { nome: nameInput.value, email: emailInput.value };
 
-        fetch(`${BASE_URL}/usuarios/${usuarioLogado.id}`, { // Usa o ID do usuário da sessão
+        // A chamada fetch agora usa o caminho relativo /usuarios/...
+        fetch(`${BASE_URL}/usuarios/${usuarioLogado.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedData),
@@ -94,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Botão para deletar a conta
     deleteAccountButton.addEventListener('click', function() {
         if (confirm('Você tem CERTEZA que deseja excluir sua conta? Esta ação é irreversível.')) {
+            // A chamada fetch agora usa o caminho relativo /usuarios/...
             fetch(`${BASE_URL}/usuarios/${usuarioLogado.id}`, { method: 'DELETE' })
             .then(response => {
                 if (response.ok) {
