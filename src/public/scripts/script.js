@@ -32,7 +32,7 @@ if (searchInput) {
     const container = document.querySelector('.livros-grid') || createResultContainer(this);
 
     try {
-      const res = await fetch('../db/db.json');
+      const res = await fetch('https://trabalho-tiaw.onrender.com/livros'); 
       const data = await res.json();
       const livros = data.livros.items;
 
