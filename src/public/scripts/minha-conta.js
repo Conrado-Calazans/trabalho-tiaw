@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const usuarioLogado = authManager.getUsuarioLogado(); // Pega os dados do usuário direto do nosso AuthManager
 
-    // --- CONFIGURAÇÃO CORRIGIDA ---
-    // A BASE_URL agora está vazia para usar caminhos relativos no Render.
-    const BASE_URL = '';
+    // --- CONFIGURAÇÃO CORRIGIDA CRÍTICA: URL DO SEU BACKEND ---
+    const BASE_URL = 'https://trabalho-tiaw.onrender.com'; 
     
     // --- ELEMENTOS DO DOM ---
     const accountDetails = document.getElementById('account-details');
@@ -28,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function carregarDadosDaConta() {
         if (!usuarioLogado) {
             console.error("Não foi possível carregar os dados: usuário não encontrado na sessão.");
+            // Opcional: redirecionar para a página de login se não houver usuário logado
+            // window.location.href = 'login.html'; 
             return;
         }
 
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const updatedData = { nome: nameInput.value, email: emailInput.value };
 
-        // A chamada fetch agora usa o caminho relativo /usuarios/...
+        // A chamada fetch AGORA usa a URL COMPLETA do backend
         fetch(`${BASE_URL}/usuarios/${usuarioLogado.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Botão para deletar a conta
     deleteAccountButton.addEventListener('click', function() {
         if (confirm('Você tem CERTEZA que deseja excluir sua conta? Esta ação é irreversível.')) {
-            // A chamada fetch agora usa o caminho relativo /usuarios/...
+            // A chamada fetch AGORA usa a URL COMPLETA do backend
             fetch(`${BASE_URL}/usuarios/${usuarioLogado.id}`, { method: 'DELETE' })
             .then(response => {
                 if (response.ok) {

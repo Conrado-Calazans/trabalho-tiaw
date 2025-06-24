@@ -1,7 +1,10 @@
 // auth.js - VERSÃO CORRIGIDA PARA RENDER
 
 // A MUDANÇA CRÍTICA ESTÁ AQUI:
-const API_URL = ''; // Usamos uma string vazia para criar caminhos relativos
+// auth.js - VERSÃO CORRIGIDA PARA RENDER
+
+// A MUDANÇA CRÍTICA ESTÁ AQUI:
+const API_URL = 'https://trabalho-tiaw.onrender.com'; // Use a URL COMPLETA do seu backend aqui!
 
 class AuthManager {
     constructor() {

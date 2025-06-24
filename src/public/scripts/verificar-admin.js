@@ -8,7 +8,7 @@
     if (!usuarioString) {
         alert('Acesso negado. Por favor, faça o login como administrador.');
         window.location.href = 'login.html'; // Redireciona para o login
-        return;
+        return; // Interrompe a execução
     }
 
     const usuario = JSON.parse(usuarioString);
@@ -17,11 +17,12 @@
     if (!usuario.admin) {
         alert('Acesso negado. Esta página é somente para administradores.');
         window.location.href = 'index.html'; // Redireciona para a página inicial
-        return;
+        return; // Interrompe a execução
     }
 
     // Se o script chegou até aqui, o usuário é um admin. A página pode carregar.
-    console.log('Acesso de administrador concedido.');
-    window.location.href = 'index.html';
+    // REMOVA OU COMENTE A LINHA ABAIXO:
+    // window.location.href = 'index.html'; // <--- ESTA LINHA CAUSA O REDIRECIONAMENTO INDESEJADO
+    console.log('Acesso de administrador concedido. Página de administração carregando.');
 
 })();
