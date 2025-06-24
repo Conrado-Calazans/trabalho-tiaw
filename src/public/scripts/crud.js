@@ -8,29 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             title: 'Como Salvar a Democracia',
             description: 'A obra reúne contribuições de acadêmicos e especialistas renomados que oferecem análises profundas e propostas concretas para fortalecer os pilares democráticos.',
-            image: '/src/public/images/Democracia.png',
-            pdf: '/src/public/pdfs/livro.pdf'
+            image: '../images/Democracia.png',
+            pdf: '../pdfs/livro.pdf'
         },
         {
             id: 2,
             title: 'A Arte da Guerra',
             description: 'O livro ensina princípios de liderança, tática e estratégia que vão além do campo de batalha, sendo amplamente aplicado em áreas como negócios, política e desenvolvimento pessoal.',
-            image: '/src/public/images/arte_guerra.jpg',
-            pdf: '/src/public/pdfs/arte_guerra.pdf'
+            image: '../images/arte_guerra.jpg',
+            pdf: '../pdfs/arte_guerra.pdf'
         },
         {
             id: 3,
             title: 'O Príncipe',
             description: 'É um tratado político escrito no século XVI que oferece conselhos diretos sobre como conquistar, manter e exercer o poder.',
-            image: '/src/public/images/o_principe.jpg',
-            pdf: '/src/public/pdfs/o_principe_maquiavel.pdf'
+            image: '../images/o_principe.jpg',
+            pdf: '../pdfs/o_principe_maquiavel.pdf'
         },
         {
             id: 4,
             title: 'Memórias Póstumas de Brás Cubas',
             description: 'É um romance publicado em 1881 e considerado uma das obras mais importantes da literatura brasileira.',
-            image: '/src/public/images/bras-cubas.jpg',
-            pdf: '/src/public/pdfs/memoriasBras.pdf'
+            image: '../images/bras-cubas.jpg',
+            pdf: '../pdfs/memoriasBras.pdf'
         }
     ];
 

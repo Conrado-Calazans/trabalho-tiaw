@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Notificações</title>
-  <link rel="stylesheet" href="/src/public/css/style.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
   <header>
     <div class="top-bar">
       <div class="logo">
-        <img src="/src/public/images/Logo.png" alt="Logo">
+        <img src="../images/Logo.png" alt="Logo">
         <div class="textos">
           <h1>Biblioteca Digital</h1>
           <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
@@ -20,9 +20,9 @@
 
     <header class="secondary-header">
     <div class="menu">  
-      <a href="/src/public/html/catalogo.html">Catálogo de livros</a>
-      <a href="/src/public/html/favoritos.html">Livros Favoritos</a>
-      <a href="/src/public/html/minha_conta.html">Minha Conta</a>
+      <a href="../html/catalogo.html">Catálogo de livros</a>
+      <a href="../html/favoritos.html">Livros Favoritos</a>
+      <a href="../html/minha_conta.html">Minha Conta</a>
       </div>            
     </div>
   </header>
@@ -45,13 +45,13 @@
 
 
    <div class="voltar-container">
-    <a href="/src/public/html/index.html" class="btn-voltar">Voltar à página inicial</a>
+    <a href="../html/index.html" class="btn-voltar">Voltar à página inicial</a>
   </div>
   
   <footer>
     <div class="footer-copy">© 2025 - Projeto Capítulo Aberto</div>
   </footer>
-  <script src="/src/public/scripts/script.js"></script>
+  <script src="../scripts/script.js"></script>
 
   <!-- Modal de Login -->
   <div id="authModal" class="modal">
@@ -130,9 +130,9 @@
   const li = document.createElement("li");
   li.innerHTML = `
     <div style="display: flex; align-items: center; gap: 10px;">
-      ${notificacao.imagem ? `<img src="/src/public/images/${notificacao.imagem}" alt="${notificacao.titulo}" style="width: 60px; height: auto; border-radius: 4px;">` : ""}
+      ${notificacao.imagem ? `<img src="../images/${notificacao.imagem}" alt="${notificacao.titulo}" style="width: 60px; height: auto; border-radius: 4px;">` : ""}
       <div>
-        <strong>📖 <a href="/src/public/pdfs/${notificacao.pdf}" target="_blank">${notificacao.titulo}</a></strong><br>
+        <strong>📖 <a href="../pdfs/${notificacao.pdf}" target="_blank">${notificacao.titulo}</a></strong><br>
         🗒️ ${notificacao.descricao || "Sem descrição"}
       </div>
     </div>

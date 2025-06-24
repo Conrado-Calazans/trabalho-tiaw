@@ -32,7 +32,7 @@ if (searchInput) {
     const container = document.querySelector('.livros-grid') || createResultContainer(this);
 
     try {
-      const res = await fetch('/src/public/db/db.json');
+      const res = await fetch('../db/db.json');
       const data = await res.json();
       const livros = data.livros.items;
 
@@ -59,14 +59,14 @@ if (searchInput) {
         container.innerHTML += `
           <div class="livro-card">
             <div class="livro-icon">
-              <img src="/src/public/images/${livro.imagem}" alt="${livro.titulo}">
+              <img src="../images/${livro.imagem}" alt="${livro.titulo}">
             </div>
             <div class="livro-info">
               <h3>${livro.titulo}</h3>
               <p>${livro.descricao}</p>
               <p>${livro.autor ? 'Autor: ' + livro.autor + '<br>' : ''}Gênero: ${livro.genero.join(', ')}</p>
               <div class="card-actions">
-                <button class="btn-ler" onclick="openPDF('/src/public/pdfs/${livro.pdf}')">Ler</button>
+                <button class="btn-ler" onclick="openPDF('../pdfs/${livro.pdf}')">Ler</button>
               </div>
             </div>
           </div>

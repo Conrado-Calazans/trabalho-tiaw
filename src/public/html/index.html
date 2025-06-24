@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capítulo Aberto</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/public/css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header>
         <div class="top-bar">
             <div class="logo">
-                <img src="/src/public/images/Logo.png" alt="Capítulo Aberto" />
+                <img src="../images/Logo.png" alt="Capítulo Aberto" />
                 <div class="textos">
                     <h1>Biblioteca online gratuita</h1>
                     <p>Explore uma coleção de livros disponíveis para leitura gratuita.</p>
@@ -34,7 +34,7 @@
     </header>
 
     <section class="hero">
-        <img src="/src/public/images/CA_notebook_readref.png" alt="Livros em um notebook" />
+        <img src="../images/CA_notebook_readref.png" alt="Livros em um notebook" />
     </section>
 
     <section class="categorias">
@@ -84,17 +84,17 @@
                 <textarea id="bookDescription" placeholder="Descrição do livro" rows="4" required></textarea>
 
                 <label for="bookImage">URL da Imagem:</label>
-                <input type="text" id="bookImage" placeholder="Ex: /src/public/images/imagem.jpg" required>
+                <input type="text" id="bookImage" placeholder="Ex: ../images/imagem.jpg" required>
 
                 <label for="bookPdf">URL do PDF:</label>
-                <input type="text" id="bookPdf" placeholder="Ex: /src/public/pdfs/livro.pdf" required>
+                <input type="text" id="bookPdf" placeholder="Ex: ../pdfs/livro.pdf" required>
 
                 <button type="submit" id="saveBookBtn">Salvar</button>
             </form>
         </div>
     </div>
 
-    <script src="/src/public/scripts/crud.js"></script>
-    <script src="/src/public/scripts/script.js"></script>
+    <script src="../scripts/crud.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
